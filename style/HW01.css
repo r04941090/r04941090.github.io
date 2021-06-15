@@ -69,7 +69,6 @@ html, body {
 .content {
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid black;
   width: 1800px;
   position: relative;
 }
@@ -110,12 +109,10 @@ html, body {
           align-items: center;
   position: relative;
   margin: 160px 0px;
-  border: 1px solid black;
 }
 
 .content .item .text {
   position: relative;
-  border: 1px solid red;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
