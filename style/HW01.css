@@ -1,0 +1,292 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #b2b2b2;
+  padding: 20px 0px;
+  position: fixed;
+  z-index: 99;
+  background-color: white;
+}
+
+.header .Home {
+  margin-left: 20px;
+}
+
+.header .Home a {
+  text-decoration: none;
+  color: black;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: black;
+  margin: 10px 30px;
+}
+
+.header .Langurage {
+  margin-right: 20px;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.MainTitle {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+.MainTitle h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 80px;
+}
+
+.MainTitle p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.content {
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid black;
+  width: 1800px;
+  position: relative;
+}
+
+.content .middleLine {
+  position: absolute;
+  width: 1px;
+  left: 50%;
+  height: 100%;
+  border-left: 1px dashed #b2b2b2;
+  top: 80px;
+  z-index: -1;
+}
+
+.content .middleLine::after {
+  position: relative;
+  content: "\30FB";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  top: calc(100% - 10px);
+  text-indent: 2px;
+  left: -11px;
+  border: 1px solid #b2b2b2;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.content .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 160px 0px;
+  border: 1px solid black;
+}
+
+.content .item .text {
+  position: relative;
+  border: 1px solid red;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* 直排排列 */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .item .text .title1 img {
+  border-radius: 20px;
+  border: 1px solid #b2b2b2;
+  width: 100px;
+  height: 100px;
+}
+
+.content .item .text h2 {
+  font-size: 40px;
+  font-weight: 900;
+  margin: 20px 0px;
+}
+
+.content .item .text h3 {
+  color: #07b53b;
+  font-size: 20px;
+}
+
+.content .item .text p {
+  font-size: 20px;
+  margin: 10px 0px 50px;
+}
+
+.content .item .text .button_other {
+  height: 75px;
+  width: 200px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 75px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.content .item .text .button_other a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+  background-color: green;
+}
+
+.content .item .text .button_other a img {
+  position: relative;
+  z-index: -1;
+  right: 250px;
+  top: -65px;
+}
+
+.content .item .text .button_other a .button_other_content {
+  position: relative;
+  right: -30px;
+  bottom: 245px;
+  color: black;
+}
+
+.content .item .text ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.content .item .text ul .button {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-right: 5px;
+  z-index: 2;
+}
+
+.content .item .text ul .button.button_AppStore img {
+  position: absolute;
+  top: -64px;
+  right: -258px;
+}
+
+.content .item .text ul .button.button_LinePay img {
+  position: absolute;
+  top: -64px;
+  right: -193px;
+}
+
+.content .item .text ul .button_other2 {
+  position: relative;
+  width: 200px;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.content .item .text ul .button_other2 a {
+  z-index: 5;
+}
+
+.content .item .text ul .button_other2 a .button_other2_text {
+  position: absolute;
+  color: black;
+  top: 30px;
+  right: 30px;
+}
+
+.content .item .text ul .button_other2 a img {
+  position: absolute;
+  right: 130px;
+  top: -63px;
+}
+
+.content .item .text ul .button_other2 a:hover {
+  background-color: green;
+}
+
+.content .item .text.left {
+  left: 320px;
+}
+
+.content .item .text.right {
+  right: -80px;
+}
+
+.content .item .pic {
+  position: relative;
+  width: 100%;
+}
+
+.content .item .pic.right {
+  right: 150px;
+}
+
+.content .item .pic.left {
+  right: -170px;
+}
+
+.content .item:nth-child(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.content .item::after {
+  content: "";
+  border: 1px solid #b2b2b2;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  display: inline-block;
+  top: -85px;
+  border-radius: 50%;
+  left: calc(50% - 5px);
+  z-index: -1;
+  background-color: white;
+}
+/*# sourceMappingURL=HW01.css.map */
