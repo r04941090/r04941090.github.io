@@ -85,12 +85,13 @@ html, body {
   top: 14px;
 }
 
-.banner img {
-  width: 100%;
+.banner {
+  width: 1600px;
+  margin: auto;
 }
 
 .MainTitle {
-  width: 1200px;
+  width: 1600px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
@@ -111,7 +112,7 @@ html, body {
 .content {
   margin-right: auto;
   margin-left: auto;
-  width: 1800px;
+  width: 1600px;
   position: relative;
 }
 
@@ -119,7 +120,7 @@ html, body {
   position: absolute;
   width: 1px;
   left: 50%;
-  height: calc(100% + 290px);
+  height: calc(100% + 240px);
   border-left: 1px dashed #b2b2b2;
   top: -80px;
   z-index: -1;
@@ -137,6 +138,7 @@ html, body {
   border: 1px solid #b2b2b2;
   border-radius: 50%;
   background-color: white;
+  z-index: 30;
 }
 
 .content .item {
@@ -254,11 +256,11 @@ html, body {
 }
 
 .content .item .text.left {
-  left: 320px;
+  left: 220px;
 }
 
 .content .item .text.right {
-  right: -80px;
+  right: -20px;
 }
 
 .content .item .pic {
@@ -267,11 +269,11 @@ html, body {
 }
 
 .content .item .pic.right {
-  right: 150px;
+  right: 70px;
 }
 
 .content .item .pic.left {
-  right: -170px;
+  right: -70px;
 }
 
 .content .item:nth-child(odd) {
@@ -293,5 +295,202 @@ html, body {
   left: calc(50% - 5px);
   z-index: -1;
   background-color: white;
+}
+
+.communicate {
+  background-color: #F7F8F9;
+  position: relative;
+  z-index: -1;
+}
+
+.communicate .mainTitle {
+  width: 1600px;
+  margin: auto;
+  text-align: center;
+}
+
+.communicate .mainTitle h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  padding-top: 200px;
+}
+
+.communicate .mainTitle p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.communicate .communicationContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1600px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* 超出範圍時是否換行的屬性 */
+  margin: auto;
+  padding-bottom: 200px;
+}
+
+.communicate .communicationContent .item {
+  margin: 20px 40px;
+}
+
+.communicate .communicationContent .item h3 {
+  margin: 20px 0px 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.communicate .communicationContent .item p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.footer ul {
+  width: 1200px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  margin-top: 40px;
+  margin-left: 200px;
+  margin-bottom: 40px;
+}
+
+.footer ul li {
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+.footer ul li div {
+  overflow: hidden;
+}
+
+.footer ul li div img {
+  vertical-align: bottom;
+  border-radius: 15px;
+}
+
+.footer ul li:nth-child(2):after,
+.footer ul li:nth-child(3):after,
+.footer ul li:nth-child(4):after,
+.footer ul li:nth-child(5):after,
+.footer ul li:nth-child(6):after,
+.footer ul li:nth-child(7):after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: calc(50% - 6px);
+  width: 1px;
+  height: 12px;
+  background-color: black;
+  vertical-align: middle;
+}
+
+.footer ul .Title {
+  margin-right: 20px;
+}
+
+.footer ul .Title a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer ul .Title a .Content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer ul .Title a .Content .Text {
+  color: black;
+}
+
+.footer ul .Title a .Content .Img {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer ul .Title a .Content .AppStore img {
+  position: absolute;
+  top: -63px;
+  left: -7px;
+}
+
+.footer ul .Title a .Content .GooglePlay img {
+  position: absolute;
+  top: -63px;
+  left: -57px;
+}
+
+.footer ul .Title a .Content .Desktop img {
+  position: absolute;
+  top: -63px;
+  left: -110px;
+}
+
+.footer ul .Title a .Content .WindowsStore img {
+  position: absolute;
+  top: -63px;
+  left: -164px;
+}
+
+.SplitLine {
+  width: 1600px;
+  height: 1px;
+  background-color: black;
+  margin-left: 200px;
+}
+
+.LastLine {
+  width: 1200px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 200px;
+}
+
+.LastLine ul {
+  list-style: none;
+}
+
+.LastLine ul li {
+  margin-right: 50px;
+  display: inline-block;
+  position: relative;
+}
+
+.LastLine ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.LastLine ul li:nth-child(2):after,
+.LastLine ul li:nth-child(3):after,
+.LastLine ul li:nth-child(4):after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: -30px;
+  top: calc(50% - 6px);
+  width: 1px;
+  height: 12px;
+  background-color: black;
+  vertical-align: middle;
 }
 /*# sourceMappingURL=HW01.css.map */
