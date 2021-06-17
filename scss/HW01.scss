@@ -252,7 +252,7 @@ html, body{
     position: relative;
     z-index: -1;
     .mainTitle{
-        width: 1600px;
+        width: 1200px;
         // border: 1px solid black;
         margin: auto;
         text-align: center;
@@ -268,7 +268,7 @@ html, body{
     }
     .communicationContent{
         display: flex;
-        width: 1600px;
+        width: 1200px;
         // border: 1px solid black;
         justify-content: center;
         flex-wrap: wrap; /* 超出範圍時是否換行的屬性 */
@@ -297,7 +297,7 @@ html, body{
         align-items: center;
         overflow: hidden;
         margin-top: 40px;
-        margin-left: 200px;
+        margin-left: 100px;
         margin-bottom: 40px;
         li{
             display: inline-block;
@@ -376,17 +376,17 @@ html, body{
     }
 }
 .SplitLine{
-    width: 1600px;
+    width: 1200px;
     height: 1px;
     background-color: black;
-    margin-left: 200px;
+    margin-left: 100px;
 }
 .LastLine{
     width: 1200px;
     // border: 1px solid black;
     margin-top: 30px;
     margin-bottom: 30px;
-    margin-left: 200px;
+    margin-left: 100px;
     ul{
         list-style: none;
         li{

@@ -305,7 +305,7 @@ html, body {
 }
 
 .communicate .mainTitle {
-  width: 1600px;
+  width: 1200px;
   margin: auto;
   text-align: center;
 }
@@ -325,7 +325,7 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1600px;
+  width: 1200px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -362,7 +362,7 @@ html, body {
           align-items: center;
   overflow: hidden;
   margin-top: 40px;
-  margin-left: 200px;
+  margin-left: 100px;
   margin-bottom: 40px;
 }
 
@@ -453,17 +453,17 @@ html, body {
 }
 
 .SplitLine {
-  width: 1600px;
+  width: 1200px;
   height: 1px;
   background-color: black;
-  margin-left: 200px;
+  margin-left: 100px;
 }
 
 .LastLine {
   width: 1200px;
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-left: 200px;
+  margin-left: 100px;
 }
 
 .LastLine ul {
