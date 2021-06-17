@@ -301,11 +301,14 @@ html, body {
   background-color: #F7F8F9;
   position: relative;
   z-index: -1;
+  width: 1400px;
 }
 
 .communicate .mainTitle {
-  width: 1400px;
+  width: 1200px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .communicate .mainTitle h1 {
@@ -323,7 +326,7 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1400px;
+  width: 1350px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -341,12 +344,12 @@ html, body {
 .communicate .communicationContent .item h3 {
   margin: 20px 0px 10px;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .communicate .communicationContent .item p {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .footer ul {
