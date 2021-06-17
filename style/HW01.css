@@ -158,7 +158,8 @@ html, body {
 
 .content .item .text {
   position: relative;
-  width: 800px;
+  border: 1px solid red;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,7 +267,7 @@ html, body {
 
 .content .item .pic {
   position: relative;
-  width: 600px;
+  width: 50%;
 }
 
 .content .item .pic.right {
