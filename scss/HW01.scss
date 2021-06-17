@@ -252,6 +252,8 @@ html, body{
     position: relative;
     z-index: -1;
     width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
     .mainTitle{
         width: 1200px;
         // border: 1px solid black;
@@ -291,6 +293,10 @@ html, body{
     }
 }
 .footer{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1400px;
     ul{
         // border: 1px solid black;
         width: 1200px;
@@ -378,17 +384,20 @@ html, body{
     }
 }
 .SplitLine{
-    width: 1200px;
+    width: 1400px;
     height: 1px;
     background-color: black;
     margin-left: 100px;
 }
 .LastLine{
-    width: 1200px;
+    width: 1400px;
     // border: 1px solid black;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 100px;
+    position: relative;
+    // margin-left: auto;
+    margin-right: auto;
     ul{
         list-style: none;
         li{

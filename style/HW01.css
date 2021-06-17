@@ -302,6 +302,8 @@ html, body {
   position: relative;
   z-index: -1;
   width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .communicate .mainTitle {
@@ -350,6 +352,13 @@ html, body {
 .communicate .communicationContent .item p {
   text-align: center;
   font-size: 16px;
+}
+
+.footer {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1400px;
 }
 
 .footer ul {
@@ -454,17 +463,19 @@ html, body {
 }
 
 .SplitLine {
-  width: 1200px;
+  width: 1400px;
   height: 1px;
   background-color: black;
   margin-left: 100px;
 }
 
 .LastLine {
-  width: 1200px;
+  width: 1400px;
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 100px;
+  position: relative;
+  margin-right: auto;
 }
 
 .LastLine ul {
