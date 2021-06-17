@@ -157,7 +157,6 @@ html, body {
 
 .content .item .text {
   position: relative;
-  border: 1px solid red;
   width: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,8 +304,7 @@ html, body {
 }
 
 .communicate .mainTitle {
-  width: 1200px;
-  margin: auto;
+  width: 1400px;
   text-align: center;
 }
 
@@ -325,7 +323,7 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1200px;
+  width: 1400px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -337,7 +335,7 @@ html, body {
 }
 
 .communicate .communicationContent .item {
-  margin: 20px 40px;
+  margin: 20px 20px;
 }
 
 .communicate .communicationContent .item h3 {

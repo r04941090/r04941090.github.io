@@ -132,7 +132,7 @@ html, body{
         // border: 1px solid black;
         .text{
             position: relative;
-            border: 1px solid red;
+            // border: 1px solid red;
             width: 800px;
             display: flex;
             flex-direction: column;
@@ -252,9 +252,8 @@ html, body{
     position: relative;
     z-index: -1;
     .mainTitle{
-        width: 1200px;
+        width: 1400px;
         // border: 1px solid black;
-        margin: auto;
         text-align: center;
         h1{
             font-size: 80px;
@@ -268,14 +267,14 @@ html, body{
     }
     .communicationContent{
         display: flex;
-        width: 1200px;
+        width: 1400px;
         // border: 1px solid black;
         justify-content: center;
         flex-wrap: wrap; /* 超出範圍時是否換行的屬性 */
         margin: auto;
         padding-bottom: 200px;
         .item{
-            margin: 20px 40px;
+            margin: 20px 20px;
             h3{
                 margin: 20px 0px 10px;
                 text-align: center;
