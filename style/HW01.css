@@ -114,6 +114,7 @@ html, body {
   margin-left: auto;
   width: 1200px;
   position: relative;
+  z-index: 80;
 }
 
 .content .middleLine {
@@ -463,7 +464,7 @@ html, body {
 }
 
 .SplitLine {
-  width: 1400px;
+  width: 1200px;
   height: 1px;
   background-color: black;
   margin-left: 100px;
@@ -475,7 +476,6 @@ html, body {
   margin-bottom: 30px;
   margin-left: 100px;
   position: relative;
-  margin-right: auto;
 }
 
 .LastLine ul {

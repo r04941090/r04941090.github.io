@@ -93,7 +93,7 @@ html, body{
     // border: 1px solid black;
     width: 1200px;
     position: relative;
-    
+    z-index: 80;
     // display: flex;
     // flex-direction: column;
     // /* 直排排列 */
@@ -384,7 +384,7 @@ html, body{
     }
 }
 .SplitLine{
-    width: 1400px;
+    width: 1200px;
     height: 1px;
     background-color: black;
     margin-left: 100px;
@@ -396,8 +396,6 @@ html, body{
     margin-bottom: 30px;
     margin-left: 100px;
     position: relative;
-    // margin-left: auto;
-    margin-right: auto;
     ul{
         list-style: none;
         li{
