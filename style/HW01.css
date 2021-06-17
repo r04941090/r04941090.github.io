@@ -86,12 +86,12 @@ html, body {
 }
 
 .banner {
-  width: 1600px;
+  width: 1200px;
   margin: auto;
 }
 
 .MainTitle {
-  width: 1600px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
@@ -112,7 +112,7 @@ html, body {
 .content {
   margin-right: auto;
   margin-left: auto;
-  width: 1600px;
+  width: 1200px;
   position: relative;
 }
 
@@ -157,7 +157,8 @@ html, body {
 
 .content .item .text {
   position: relative;
-  width: 100%;
+  border: 1px solid red;
+  width: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,24 +257,24 @@ html, body {
 }
 
 .content .item .text.left {
-  left: 220px;
+  left: 20px;
 }
 
 .content .item .text.right {
-  right: -20px;
+  right: -80px;
 }
 
 .content .item .pic {
   position: relative;
-  width: 100%;
+  width: 600px;
 }
 
 .content .item .pic.right {
-  right: 70px;
+  right: 150px;
 }
 
 .content .item .pic.left {
-  right: -70px;
+  right: 130px;
 }
 
 .content .item:nth-child(odd) {

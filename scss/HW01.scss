@@ -68,11 +68,11 @@ html, body{
     }
 }
 .banner{
-    width: 1600px;
+    width: 1200px;
     margin: auto;
 }
 .MainTitle{
-    width: 1600px;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
@@ -91,7 +91,7 @@ html, body{
     margin-right: auto;
     margin-left: auto;
     // border: 1px solid black;
-    width: 1600px;
+    width: 1200px;
     position: relative;
     
     // display: flex;
@@ -132,8 +132,8 @@ html, body{
         // border: 1px solid black;
         .text{
             position: relative;
-            // border: 1px solid red;
-            width: 100%;
+            border: 1px solid red;
+            width: 800px;
             display: flex;
             flex-direction: column;
             /* 直排排列 */
@@ -214,20 +214,20 @@ html, body{
             }
         }
         .text.left{
-            left: 220px;
+            left: 20px;
         }
         .text.right{
-            right: -20px;
+            right: -80px;
         }
         .pic{
             position: relative;
-            width: 100%;
+            width: 600px;
         }
         .pic.right{
-            right: 70px;
+            right: 150px;
         }
         .pic.left{
-            right: -70px;
+            right: 130px;
         }
     }
     .item:nth-child(odd){
