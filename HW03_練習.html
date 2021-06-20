@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type = "number"]:out-of-range{
+            color: red;
+        }
+        .age{
+            width: 200px;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="user_name">姓名</label>
+            <input id="user_name" type="text">
+        </div>
+
+        <div>
+            <label>
+                密碼
+                <input type="password">
+                <!-- 如果label沒有寫for 則input的id可不用寫-->
+            </label>
+        </div>
+        <div>
+            <label>
+                年齡
+                <input class="age" type="number" min="18" max="60" placeholder="年齡範圍：18 - 60" appearance = "none">
+            </label>
+        </div>
+        
+        <div>
+            <label>
+                信箱
+                <input type="email">
+            </label>
+        </div>
+        <div>
+            <label for="">網站</label>
+            <input type="url">
+        </div>
+        <div>
+            <label>
+                生日
+                <input type="date">
+            </label>
+        </div>
+        <div>
+            <label>
+                時間
+                <input type="time">
+            </label>
+        </div>
+        <div>
+            <label>
+                上傳
+                <input type="file">
+            </label>
+        </div>
+        <div>
+            <label for="">搜尋</label>
+            <input type="search">
+        </div>
+        <div>
+            <label for="">色彩</label>
+            <input type="color">
+        </div>
+        <div>
+            <label for="">
+                <input type="checkbox">
+                興趣
+            </label>
+        </div>
+        <div>
+            性別
+            <label>
+                <input type="radio" name="sex">
+                男
+            </label>
+            <label>
+                <input type="radio" name="sex">
+                女
+            </label>
+            <label>
+                <input type="radio" name="sex">
+                中性
+            </label>
+        </div>
+        <div>
+            <label for="">
+                <input type="image" src="https://picsum.photos/50/50/?random=1">
+            </label>
+        </div>
+    </form>
+    <form>
+        <div>
+          <label for="example">Let's submit some text</label>
+          <input id="example" type="text" name="text">
+        </div>
+        <div>
+          <input type="submit" value="Submit to me">
+        </div>
+      </form>
+</body>
+</html>
