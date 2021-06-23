@@ -1,0 +1,24 @@
+$background: #00142D;
+$font-color: #00142D;
+$shallowfont-color: #0061FF;
+$h1size: 40px;
+$h2size: 35px;
+$psize: 17px;
+
+%freebutton{
+    color: #fff;
+    // background-color: #0747a6;
+    text-align: center;
+    
+}
+%p-setting{
+    color: $font-color;
+    font-size: $psize;
+    line-height: 2;
+}
+
+%h2-setting{
+    color: $font-color;
+    font-size: $h2size;
+    line-height: 1.5;
+}

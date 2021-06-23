@@ -1,0 +1,14 @@
+@import url(https://use.fontawesome.com/releases/v5.15.3/css/all.css);
+$chevron-right: "\f054";
+// <i class="fas fa-chevron-right"></i>
+$arrow-right: "\f061";
+// <i class="fas fa-arrow-right"></i>
+
+%FontawesomeSetting{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+%FontawasomeSetting-Brands{
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 900;
+}
