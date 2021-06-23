@@ -781,12 +781,18 @@ main article section .content .content-image img {
 }
 
 .branch section div ul li a .item-img {
-  padding-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 5px;
   height: 130px;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
+}
+
+.branch section div ul li a .item-img img {
+  height: 100%;
 }
 
 .branch section div .item {
