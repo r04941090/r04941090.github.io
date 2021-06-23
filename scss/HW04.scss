@@ -21,7 +21,7 @@ header{
         .header-top{
             // border: 1px solid red;
             width: 1500px;
-            // margin: auto;
+            margin: auto;
             background: $background;
             height: 40px;
             display: flex;
@@ -291,11 +291,12 @@ header{
             p{
                 font-size: 17px;
                 line-height: 2;
+                font-weight: 300;
             }
             form{
                 margin-top: 30px;
                 display: flex;
-                justify-content: space-between;
+                // justify-content: space-between;
                 align-items: center;
                 label{
                     input{
@@ -314,69 +315,25 @@ header{
                         }
                     }
                 }
-                .free{
-                    // border: 1px solid black;
-                    margin-right: 40px;
-                    a{
-                        display: inline-block;
-                        width: 120px;
-                        height: 40px;
-                        // border: 1px solid green;
-                        text-decoration: none;
-                        position: relative;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                        color: black;
-                        z-index: 2;
-                        &::before{
-                            position: absolute;
-                            display: inline-block;
-                            top: 0;
-                            left: -5px;
-                            content: "";
-                            width: 40px;
-                            height: 40px;
-                            background: #0061FF;
-                            border-radius: 100%;
-                            z-index: -1;
-                        }
-                        &::after{
-                            position: absolute;
-                            display: inline-block;
-                            top: 0;
-                            right: -5px;
-                            content: "";
-                            width: 40px;
-                            height: 40px;
-                            background: #0061FF;
-                            border-radius: 100%;
-                            z-index: -1;
-                        }
-                        &:hover{
-                            &::before, &::after, .small{
-                                background: #0747a6;
-                            }
-                        }
-                        .small{
-                            margin: auto;
-                            @extend %freebutton;
-                            width: 90px;
-                            height: 40px;
-                            line-height: 40px;
-                            position: relative;
-                            // border: 1px solid red;
-                            background: #0061FF;
-                            
-                            
-                        }
+                button{
+                    background-color: #0061FF;
+                    height: 40px;
+                    font-size: 106.25%;
+                    line-height: 1;
+                    text-align: center;
+                    border: 0;
+                    cursor: pointer;
+                    color: #fff;
+                    width: 125px;
+                    border-radius: 30px;
+                    margin-left: 20px;
+                    &:hover{
+                        background-color: #0747a6;
                     }
                 }
             }
         }
         .content-image{
-            // width: 50%;
             img{
                 width: 100%;
             }
@@ -403,6 +360,7 @@ main{
                 margin: 30px 0 50px;
                 font-size: 17px;
                 line-height: 2;
+                font-weight: 300;
             }
         }
         section{
@@ -428,6 +386,7 @@ main{
                     p{
                         font-size: $psize;
                         line-height: 2;
+                        font-weight: 300;
                     }
                     
                     ul{
@@ -440,6 +399,7 @@ main{
                             padding: 10px 0px;
                             color: $font-color;
                             line-height: 100%;
+                            font-weight: 300;
                             &:before{
                                 display: inline-block;
                                 @extend %FontawesomeSetting;
@@ -543,36 +503,29 @@ main{
             .content{
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: center;
                 // border: 1px solid black;
                 .item{
-                    width: 400px;
+                    width: 30%;
                     // border: 1px solid red;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     // margin: 0 50px;
-                    padding: 20px 50px;
+                    padding: 20px 70px;
                     box-sizing: border-box;
-                    .item-image-out{
-                        width: 120px;
-                        height: 120px;
-                        // border: 1px solid black;
-                        box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, .1);
-                        // h-shadow：水平位移距離 v-shadow：垂直位移距離 blur：模糊半徑
-                        // spread：擴散距離 color：顏色 inset：內陰影
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                    .item-image{
+                        height: 70px;
+                        padding: 25px;
+                        // border: 1px solid red;
                         border-radius: 50%;
-                        margin-bottom: 30px;
+                        box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, .1);
+                        margin-bottom: 25px;
                         background: #fff;
-                        .item-image{
-                            height: 70px;
-                            img{
-                                height: 100%;
-                                vertical-align: bottom;
-                            }
+                        
+                        img{
+                            height: 100%;
+                            vertical-align: bottom;
                         }
                     }
                     .item-txt{
@@ -585,6 +538,7 @@ main{
                         p{
                             font-size: 15px;
                             line-height: 1.5;
+                            font-weight: 300;
                         }
                     }
                 }
@@ -738,10 +692,12 @@ main{
                     p{
                         font-size: 16px;
                         line-height: 2;
+                        font-weight: 300;
                     }
                     .manager{
                         margin-top: auto;
                         font-size: 17px;
+                        font-weight: 300;
                     }
                 }
             }
@@ -1101,6 +1057,7 @@ footer{
                     color: rgba(255, 255, 255, .4);
                     font-size: 14px;
                     line-height: 1.5;
+                    font-weight: 100;
                 }
             }
         }

@@ -11,7 +11,7 @@ footer .footer-other-bg .other .icon li a .facebook:before, footer .footer-other
   font-weight: 900;
 }
 
-header .nav-bg nav .free a .small, .banner .content .content-txt form .free a .small, footer .footer-content-bg .content .free a .small {
+header .nav-bg nav .free a .small, footer .footer-content-bg .content .free a .small {
   color: #fff;
   text-align: center;
 }
@@ -41,6 +41,7 @@ header .header-bg {
 
 header .header-bg .header-top {
   width: 1500px;
+  margin: auto;
   background: #00142D;
   height: 40px;
   display: -webkit-box;
@@ -347,6 +348,7 @@ header .nav-bg nav .free a .small {
 .banner .content .content-txt p {
   font-size: 17px;
   line-height: 2;
+  font-weight: 300;
 }
 
 .banner .content .content-txt form {
@@ -354,9 +356,6 @@ header .nav-bg nav .free a .small {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -380,70 +379,22 @@ header .nav-bg nav .free a .small {
   color: #fff;
 }
 
-.banner .content .content-txt form .free {
-  margin-right: 40px;
-}
-
-.banner .content .content-txt form .free a {
-  display: inline-block;
-  width: 120px;
+.banner .content .content-txt form button {
+  background-color: #0061FF;
   height: 40px;
-  text-decoration: none;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: black;
-  z-index: 2;
+  font-size: 106.25%;
+  line-height: 1;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  width: 125px;
+  border-radius: 30px;
+  margin-left: 20px;
 }
 
-.banner .content .content-txt form .free a::before {
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  left: -5px;
-  content: "";
-  width: 40px;
-  height: 40px;
-  background: #0061FF;
-  border-radius: 100%;
-  z-index: -1;
-}
-
-.banner .content .content-txt form .free a::after {
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  right: -5px;
-  content: "";
-  width: 40px;
-  height: 40px;
-  background: #0061FF;
-  border-radius: 100%;
-  z-index: -1;
-}
-
-.banner .content .content-txt form .free a:hover::before, .banner .content .content-txt form .free a:hover::after, .banner .content .content-txt form .free a:hover .small {
-  background: #0747a6;
-}
-
-.banner .content .content-txt form .free a .small {
-  margin: auto;
-  width: 90px;
-  height: 40px;
-  line-height: 40px;
-  position: relative;
-  background: #0061FF;
+.banner .content .content-txt form button:hover {
+  background-color: #0747a6;
 }
 
 .banner .content .content-image img {
@@ -479,6 +430,7 @@ main article .title p {
   margin: 30px 0 50px;
   font-size: 17px;
   line-height: 2;
+  font-weight: 300;
 }
 
 main article section .content {
@@ -516,6 +468,7 @@ main article section .content .content-txt .pattern {
 main article section .content .content-txt p {
   font-size: 17px;
   line-height: 2;
+  font-weight: 300;
 }
 
 main article section .content .content-txt ul {
@@ -532,6 +485,7 @@ main article section .content .content-txt ul li {
   padding: 10px 0px;
   color: #00142D;
   line-height: 100%;
+  font-weight: 300;
 }
 
 main article section .content .content-txt ul li:before {
@@ -650,13 +604,13 @@ main article section .content .content-image img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .information section div .content .item {
-  width: 400px;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -667,35 +621,22 @@ main article section .content .content-image img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 50px;
+  padding: 20px 70px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.information section div .content .item .item-image-out {
-  width: 120px;
-  height: 120px;
+.information section div .content .item .item-image {
+  height: 70px;
+  padding: 25px;
+  border-radius: 50%;
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 50%;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   background: #fff;
 }
 
-.information section div .content .item .item-image-out .item-image {
-  height: 70px;
-}
-
-.information section div .content .item .item-image-out .item-image img {
+.information section div .content .item .item-image img {
   height: 100%;
   vertical-align: bottom;
 }
@@ -710,6 +651,7 @@ main article section .content .content-image img {
 .information section div .content .item .item-txt p {
   font-size: 15px;
   line-height: 1.5;
+  font-weight: 300;
 }
 
 .branch {
@@ -893,11 +835,13 @@ main article section .content .content-image img {
 .branch section div .item .item-txt p {
   font-size: 16px;
   line-height: 2;
+  font-weight: 300;
 }
 
 .branch section div .item .item-txt .manager {
   margin-top: auto;
   font-size: 17px;
+  font-weight: 300;
 }
 
 footer .footer-content-bg {
@@ -1296,6 +1240,7 @@ footer .footer-other-bg .other .context p {
   color: rgba(255, 255, 255, 0.4);
   font-size: 14px;
   line-height: 1.5;
+  font-weight: 100;
 }
 
 .message {
