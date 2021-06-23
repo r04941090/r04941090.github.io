@@ -856,13 +856,39 @@ footer .footer-content-bg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+footer .footer-content-bg .footer-content-earth {
+  height: 73%;
+  position: absolute;
+  bottom: 0;
+  left: 65%;
+}
+
+footer .footer-content-bg .footer-content-earth img {
+  height: 100%;
+}
+
+footer .footer-content-bg .footer-content-spain {
+  position: absolute;
+  top: 0;
+  left: -10%;
+  z-index: 0;
+  height: 80%;
+}
+
+footer .footer-content-bg .footer-content-spain img {
+  height: 100%;
 }
 
 footer .footer-content-bg .content {
-  padding-left: 60px;
+  padding-left: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 1500px;
+  z-index: 1;
 }
 
 footer .footer-content-bg .content h1 {
