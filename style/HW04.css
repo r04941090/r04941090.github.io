@@ -704,22 +704,26 @@ main article section .content .content-image img {
   position: relative;
 }
 
-.branch section div ul li:nth-child(1)::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 4px solid blue;
-}
-
 .branch section div ul li:hover::before {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  border-bottom: 4px solid blue;
+  border-bottom: 4px solid #0061FF;
+}
+
+.branch section div ul li:hover::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  border: 1px solid #ccdfff;
+  background-color: #ccdfff;
+  border-radius: 60% 40% 80% 50%;
+  width: 80px;
+  height: 80px;
+  z-index: -1;
 }
 
 .branch section div ul li a {

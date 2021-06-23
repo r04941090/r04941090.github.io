@@ -576,16 +576,17 @@ main{
                     border-bottom: 1px solid rgba(0, 0, 0, .1);
                     // border: 1px solid blue;
                     position: relative;
-                    &:nth-child(1){
-                        &::before{
-                            content: "";
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 100%;
-                            border-bottom: 4px solid blue;
-                        }
-                    }
+                    // &:nth-child(1){
+                    //     &::before{
+                    //         content: "";
+                    //         position: absolute;
+                    //         bottom: 0;
+                    //         left: 0;
+                    //         width: 100%;
+                    //         border-bottom: 4px solid #0061FF;
+                    //     }
+                    // }
+
                     &:hover{
                         &::before{
                             content: "";
@@ -593,7 +594,19 @@ main{
                             bottom: 0;
                             left: 0;
                             width: 100%;
-                            border-bottom: 4px solid blue;
+                            border-bottom: 4px solid #0061FF;
+                        }
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            top: calc(50% - 40px);
+                            left: calc(50% - 40px);
+                            border: 1px solid #ccdfff;
+                            background-color: #ccdfff;
+                            border-radius: 60% 40% 80% 50%;
+                            width: 80px;
+                            height: 80px;
+                            z-index: -1;
                         }
                     }
                     a{
