@@ -66,8 +66,17 @@ header .header-bg .header-top ul li {
 }
 
 header .header-bg .header-top ul li:nth-child(1) {
-  padding-right: 20px;
+  padding-right: 21px;
+  position: relative;
+}
+
+header .header-bg .header-top ul li:nth-child(1)::before {
+  content: "";
   border-right: 1px solid rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 0;
+  height: 16px;
 }
 
 header .header-bg .header-top ul li:nth-child(2) {
@@ -319,7 +328,6 @@ header .nav-bg nav .free a .small {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
-  margin-bottom: 50px;
 }
 
 .banner .content .content-txt {
@@ -543,7 +551,7 @@ main article section .content .content-txt ul li:before {
 }
 
 main article section .content .content-txt a {
-  width: 100%;
+  width: 180px;
   height: 20px;
   text-decoration: none;
   display: -webkit-box;
@@ -562,7 +570,7 @@ main article section .content .content-txt a:hover .line-extension::after {
   left: 22px;
 }
 
-main article section .content .content-txt a .content {
+main article section .content .content-txt a .arrow-content {
   color: #0061FF;
 }
 
@@ -862,7 +870,7 @@ main article section .content .content-image img {
   left: 22px;
 }
 
-.branch section div .item .item-txt a .content {
+.branch section div .item .item-txt a .arrow-content {
   color: #0061FF;
 }
 
