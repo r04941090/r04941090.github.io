@@ -752,7 +752,7 @@ main article section .content .content-image img {
 }
 
 .branch section div ul li {
-  width: 25%;
+  width: 20%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -781,36 +781,12 @@ main article section .content .content-image img {
 }
 
 .branch section div ul li a .item-img {
+  padding-top: 20px;
   height: 130px;
+  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.branch section div ul li a .item-img.img1 {
-  padding: 12% 30%;
-}
-
-.branch section div ul li a .item-img.img2 {
-  width: 100%;
-  padding: 12% 37%;
-}
-
-.branch section div ul li a .item-img.img3 {
-  padding: 12% 25%;
-}
-
-.branch section div ul li a .item-img.img4 {
-  padding: 11% 30%;
-}
-
-.branch section div ul li a .item-img.img5 {
-  padding: 12% 30%;
-}
-
-.branch section div ul li a .item-img img {
-  width: 100%;
-  height: 100%;
-  vertical-align: middle;
+  text-align: center;
 }
 
 .branch section div .item {
