@@ -280,7 +280,6 @@ header .nav-bg nav .free a .small {
 .banner {
   position: relative;
   height: 830px;
-  background-color: #00142D;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,6 +289,21 @@ header .nav-bg nav .free a .small {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.banner .banner-img {
+  margin: auto;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 830px;
+}
+
+.banner .banner-img img {
+  width: 100%;
+  height: 80%;
 }
 
 .banner .content {
@@ -319,7 +333,7 @@ header .nav-bg nav .free a .small {
 }
 
 .banner .content .content-txt h1.subtitle {
-  color: green;
+  color: #00c66a;
 }
 
 .banner .content .content-txt p {
@@ -343,7 +357,7 @@ header .nav-bg nav .free a .small {
 .banner .content .content-txt form label input {
   border: none;
   outline: none;
-  background-color: #00142D;
+  background-color: #000c2b;
   width: 360px;
   padding: 10px 0px;
   font-size: 17px;
@@ -448,7 +462,7 @@ main article .title {
 }
 
 main article .title h2 {
-  margin-top: 100px;
+  margin-top: 60px;
   font-size: 35px;
   line-height: 1.5;
 }
