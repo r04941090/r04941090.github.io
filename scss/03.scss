@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Noto Sans TC', sans-serif;
+    // border: 1px solid black;
+}
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // 也可讓wrap置中，因為justify-content(主軸)、align-items(次軸)是排列子層
+    background-color: #003;
+}
+.wrap{
+    width: 1200px;
+    // align-items: center; // 也可以讓wrap垂直置中
+    display: flex;
+    // border: 1px solid red;
+    margin: auto;
+    justify-content: center;
+    
+    .item{
+        width: 368px;  // 原影片為400px
+        margin: 15px;
+        // box-sizing: content-box;
+        // box-sizing: border-box;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        transform: translateY(0px);  // 對應hover的移動
+        transition: .5s;
+        // z-index: -1;
+        // background-color: #FB8076;
+        // display: flex;
+        // flex-direction: column;
+        
+        &:hover{
+            transform: translateY(-50px);
+            background-image: linear-gradient(0deg, #FB8076, #FB8076);
+            // background-image: #FB8076;
+            // background-color: #FB8076;
+        }
+        &:hover .txt::before{
+            border-left: 184px solid #FEB85D;
+            border-right: 184px solid #FEB85D;
+            // border-left: 184px solid transparent;
+            // border-right: 184px solid transparent;
+        }
+        &:hover .txt{
+            background-image: linear-gradient(0deg, #FB8076, #FEB85D); // 下 > 上
+        }
+        &:hover h2{
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+        &:hover p{
+            color: #fff;
+        }
+        .txt{
+            padding: 20px;
+            // border: 1px solid red;
+            position: relative;
+            background-color: #fff;
+            
+            &::before{   // 可比較before、after差別
+                display: inline; // 預設為inline，須設定block or inline-block，w、h才有效
+                position: absolute; //當設定定位，會自動轉型成block
+                content: "";
+                width: 0px;
+                height: 0px;
+                left: 0;
+                top: 0;
+                border-top: 50px solid transparent;
+                border-left: 184px solid #fff;
+                border-right: 184px solid #fff;
+                transform: translateY(-100%); // 100% * border-top高度 = 往上移動50px
+            }
+            h2{
+                border-bottom: 1px solid #888;
+                padding-bottom: 0.3em;
+                margin-bottom: 0.4em;
+                font-weight: 900;
+                transition: .25s;
+            }
+            p{
+                line-height: 1.6;
+                font-size: 12px;
+                font-weight: 300;
+                transition: .25s;
+                &::before{      // 測試before為inline
+                    // display: inline-block;
+                    content: "23";
+                    width: 10px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    img{
+        width: 100%;
+        vertical-align: middle;
+    }
+}
