@@ -48,8 +48,6 @@ body {
 .wrap .item:hover {
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#FB8076), to(#FB8076));
-  background-image: linear-gradient(0deg, #FB8076, #FB8076);
 }
 
 .wrap .item:hover .txt::before {
