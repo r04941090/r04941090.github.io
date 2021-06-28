@@ -76,7 +76,6 @@ html, body{
     }
 }
 header{
-    width: 100%;
     background-color: #71b85f;
     position: fixed;
     z-index: 2;
@@ -85,8 +84,6 @@ header{
         margin: auto;
         height: 55px;
         background-color: #71b85f;
-        // position: relative;
-        
         .menu-btn{
             display: inline-block;
             width: 55px;
@@ -108,7 +105,6 @@ header{
                 margin: auto;
                 transform: rotate(0deg);
                 transition: .3s;
-                
             }
             &::after{
                 @extend %FontawesomeSetting;
@@ -850,7 +846,7 @@ header{
                 display: flex;
                 justify-content: space-between;
                 align-content: center;
-                transform: translateX(0%);
+                // transform: translateX(0%);
                 box-shadow: none;
                 a{
                     // border: 1px solid blue;
