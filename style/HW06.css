@@ -646,6 +646,8 @@ footer .footer-content-bg .footer-content-spain img {
 }
 
 footer .footer-content-bg .content {
+  width: 100%;
+  margin: auto;
   padding-left: 50px;
   max-width: 1500px;
   z-index: 1;
@@ -1751,6 +1753,10 @@ footer .footer-list .container .row ul ul li a:hover {
     padding: 20px 0px;
     border-bottom: 1px solid #000;
   }
+  header .content-wrap .content nav .main-menu-list > li > label .sub-menu p a {
+    text-decoration: none;
+    color: #2684ff;
+  }
   header .content-wrap .content nav .main-menu-list > li > label .sub-menu .sub-menu-content {
     padding-top: 20px;
     display: -webkit-box;
@@ -1761,15 +1767,22 @@ footer .footer-list .container .row ul ul li a:hover {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  header .content-wrap .content nav .main-menu-list > li > label .sub-menu .sub-menu-content .title {
+    font-size: 20px;
+  }
   header .content-wrap .content nav .main-menu-list > li > label .sub-menu .sub-menu-content .title ul {
     padding-top: 10px;
   }
   header .content-wrap .content nav .main-menu-list > li > label .sub-menu .sub-menu-content .title ul li {
+    font-size: 16px;
     padding: 20px 0px;
   }
   header .content-wrap .content nav .main-menu-list > li > label .sub-menu .sub-menu-content .title ul li a {
     text-decoration: none;
-    color: #000;
+    color: #888;
+  }
+  header .content-wrap .content nav .main-menu-list > li > label .sub-menu .sub-menu-content .title ul li a:hover {
+    color: #2684ff;
   }
   header .content-wrap .content nav .other {
     display: none;
