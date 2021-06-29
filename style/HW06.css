@@ -981,18 +981,123 @@ footer .footer-list .container .row ul ul li a:hover {
     font-size: 30px;
   }
   header .content-wrap .content nav {
+    -webkit-box-shadow: 0px 2px 10px 2px #eee inset;
+            box-shadow: 0px 2px 10px 2px #eee inset;
     width: 100%;
     height: calc(100vh - 50px);
     position: absolute;
     top: 50px;
     right: -100%;
     background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0px 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  header .content-wrap .content nav .main-menu-list {
+    padding: 40px 0px;
+  }
+  header .content-wrap .content nav .main-menu-list li {
+    padding: 20px 0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   header .content-wrap .content nav .main-menu-list li .list-property .sub-menu {
     display: none;
   }
   header .content-wrap .content nav .main-menu-list li .list-property .sub-menu h3, header .content-wrap .content nav .main-menu-list li .list-property .sub-menu p {
     display: none;
+  }
+  header .content-wrap .content nav .other {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .content-wrap .content nav .other .freebtn {
+    width: 100%;
+  }
+  header .content-wrap .content nav .other .freebtn a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0061ff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 200px;
+  }
+  header .content-wrap .content nav .other .freebtn a:hover {
+    background-color: #0747a6;
+  }
+  header .content-wrap .content nav .other .login {
+    margin-top: 10px;
+    width: 100%;
+  }
+  header .content-wrap .content nav .other .login a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: #0747a6;
+    border: 1px solid #0061ff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 200px;
+  }
+  header .content-wrap .content nav .other ul {
+    background-color: #172b4d;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+  }
+  header .content-wrap .content nav .other ul li {
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    width: 50%;
+    position: relative;
+  }
+  header .content-wrap .content nav .other ul li:before {
+    content: "";
+    height: 25px;
+    width: 1px;
+    background-color: #777;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+  }
+  header .content-wrap .content nav .other ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
   }
   header .content-wrap .content .free-btn {
     display: none;
@@ -1666,7 +1771,7 @@ footer .footer-list .container .row ul ul li a:hover {
     text-decoration: none;
     color: #000;
   }
-  header .content-wrap .content nav .main-menu-list > li > label .other {
+  header .content-wrap .content nav .other {
     display: none;
   }
   header .content-wrap .content .free-btn {
