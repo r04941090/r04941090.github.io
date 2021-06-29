@@ -133,9 +133,9 @@ html, body {
 }
 
 header {
-  width: 100%;
   background-color: #71b85f;
   position: fixed;
+  width: 100%;
   z-index: 2;
 }
 
@@ -285,8 +285,8 @@ header .page-header .orderpage {
   padding: 70px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -994,8 +994,6 @@ header .page-header .orderpage .content form .button:hover {
             justify-content: space-between;
     -ms-flex-line-pack: center;
         align-content: center;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
     -webkit-box-shadow: none;
             box-shadow: none;
   }

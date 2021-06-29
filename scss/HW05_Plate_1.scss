@@ -78,6 +78,7 @@ html, body{
 header{
     background-color: #71b85f;
     position: fixed;
+    width: 100%;
     z-index: 2;
     .page-header{
         max-width: 1200px;
@@ -211,7 +212,7 @@ header{
             height: calc(100vh);
             padding: 70px;
             box-sizing: border-box;
-            transform: translateX(100%);
+            transform: translateX(10%);
             transition: .3s;
             .content{
                 // border: 1px solid red;

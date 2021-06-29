@@ -35,14 +35,13 @@ body{
         transition: .5s;
         // z-index: -1;
         // background-color: #FB8076;
-        // display: flex;
-        // flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        
         
         &:hover{
             transform: translateY(-50px);
-            // background-image: linear-gradient(0deg, #FB8076, #FB8076);
-            // background-image: #FB8076;
-            // background-color: #FB8076;
+            
         }
         &:hover .txt::before{
             border-left: 184px solid #FEB85D;
@@ -65,7 +64,7 @@ body{
             // border: 1px solid red;
             position: relative;
             background-color: #fff;
-            
+            flex-grow: 1;
             &::before{   // 可比較before、after差別
                 display: inline; // 預設為inline，須設定block or inline-block，w、h才有效
                 position: absolute; //當設定定位，會自動轉型成block
