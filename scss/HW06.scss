@@ -9,7 +9,7 @@
     list-style: none;
     font-family: $NotoSansTC;
 }
-input[id^="header"], input[id^="item"]{  // 開頭包含特定文字
+input[id^="header"], input[id^="item"], input[id^="sub"]{  // 開頭包含特定文字
     display: none;
 }
 
@@ -31,10 +31,168 @@ input[id="open-menu"]
         }
     }
 }
+header{
+    .content-wrap{
+        p{
+            line-height: 2;
+        }
+        .title{
+            ul{
+                li{
+                    &.function-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f013";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.shape-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f02d";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.opensecret-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f518";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.answer-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f4ad";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.hardware-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f7d9";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.open-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f1ea";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.module-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f0b1";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.company-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f1ad";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.cross-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f05b";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.adv-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f29e";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.google-icon:before{
+                        @extend %FontawasomeSetting-Brands;
+                        content: "\f1a0";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.facebook-icon:before{
+                        @extend %FontawasomeSetting-Brands;
+                        content: "\f082";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.line-icon:before{
+                        @extend %FontawasomeSetting-Brands;
+                        content: "\f3c0";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.AI-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f135";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.retail-icon:before{
+                        @extend %FontawasomeSetting-Brands;
+                        content: "\f37c";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.O2O-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f519";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.social-icon:before{
+                        @extend %FontawasomeSetting-Brands;
+                        content: "\f835";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.tool-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f49e";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.room-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f51b";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.charge-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f5e7";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.brand-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f462";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.grow-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f4d8";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    &.vedio-icon:before{
+                        @extend %FontawesomeSetting;
+                        content: "\f101";
+                        margin-right: 5px;
+                        color: #0061FF;
+                    }
+                    a{
+                        color: #000 !important;
+                        &:hover{
+                            color: #0061FF !important;
+                            border-bottom: 1px solid #0061FF;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
 .banner{
     position: relative;
     .content{
-        padding-top: 150px;
         padding-bottom: 120px;
         max-width: 1520px;
         margin: auto;
@@ -122,7 +280,6 @@ input[id="open-menu"]
 
 
 main{
-    margin-top: 100px;
     section{
         margin: auto;
         .title{
@@ -520,8 +677,52 @@ footer{
     }
     
 }
-
+@media screen and (min-width: 768px){}
 @media screen and (max-width: 991px){
+    #sub-open:checked{
+        & ~ .list-property{
+            .fas{
+                transform: scale(-1);
+            }
+            .sub-menu{
+                margin-top: 20px;
+                display: block;
+            }
+        }
+    }
+    #sub-charge:checked{
+        & ~ .list-property{
+            .fas{
+                transform: scale(-1);
+            }
+            .sub-menu{
+                margin-top: 20px;
+                display: block;
+            }
+        }
+    }
+    #sub-solution:checked{
+        & ~ .list-property{
+            .fas{
+                transform: scale(-1);
+            }
+            .sub-menu{
+                margin-top: 20px;
+                display: block;
+            }
+        }
+    }
+    #sub-other:checked{
+        & ~ .list-property{
+            .fas{
+                transform: scale(-1);
+            }
+            .sub-menu{
+                margin-top: 20px;
+                display: block;
+            }
+        }
+    }
     header{
         width: 100%;
         z-index: 2;
@@ -588,6 +789,8 @@ footer{
                     }
                 }
                 nav{
+                    overflow-y: auto;
+                    &::-webkit-scrollbar { width: 0 !important }
                     // border: 1px solid red;
                     box-shadow: 0px 2px 10px 2px #eee inset;
                     width: 100%;
@@ -609,10 +812,19 @@ footer{
                             padding: 20px 0px;
                             box-sizing: border-box;
                             .list-property{
+                                cursor: pointer;
+                                &
                                 .sub-menu{
                                     display: none;
                                     h3, p{
                                         display: none;
+                                    }
+                                    .sub-menu-content{
+                                        .title{
+                                            a{
+                                                text-decoration: none;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -888,6 +1100,11 @@ footer{
                     }
                 }
             }
+        }
+    }
+    .banner{
+        .content{
+            padding-top: 80px;
         }
     }
     .branch{
@@ -1410,10 +1627,12 @@ footer{
                                     z-index: 2;
                                     position: absolute;
                                     background-color: #fff;
+                                    box-shadow: 0px 3px 6px 2px #eee inset;
                                     &.sub-menu1{
                                         top: 80px;
                                         left: -20px;
-                                        width: 500px;
+                                        width: 600px;
+                                        padding-right: 60px;
                                     }
                                     &.sub-menu2{
                                         top: 80px;
@@ -1446,11 +1665,12 @@ footer{
                                     }
                                     .sub-menu-content{
                                         padding-top: 20px;
+                                        
                                         display: flex;
                                         width: 100%;
                                         justify-content: space-between;
                                         .title{
-                                            font-size: 20px;
+                                            font-size: 18px;
                                             ul{
                                                 // border-top: 1px solid #000;
                                                 padding-top: 10px;
@@ -1509,7 +1729,6 @@ footer{
             align-items: center;
             color: #fff;
             // border: 1px solid red;
-            
             &:before{
                 content: "";
                 background-image: url("/image/Shopline/bannerbg.png");
@@ -1540,6 +1759,7 @@ footer{
                     flex-direction: column;
                     // justify-content: space-between;
                     // align-items: center;
+                    
                     label{
                         input{
                             border: none;
@@ -2181,6 +2401,7 @@ footer{
     }
     
     main{
+        margin-top: 100px;
         section{
             .title{
                 h2{
@@ -2196,6 +2417,7 @@ footer{
                     padding: 100px 0px;
                     border-bottom: 1px solid black;
                     display: flex;
+                    
                     &:nth-child(odd){
                         flex-direction: row-reverse;
                         
@@ -2204,7 +2426,10 @@ footer{
                         border: none;
                     }
                     .pic{
-                        height: 100%;
+                        
+                    }
+                    .content-pic{
+                        margin: auto;
                     }
                     .text{
                         height: 100%;
@@ -2213,11 +2438,14 @@ footer{
                         h2{
                             font-size: 35px;
                             line-height: 1.5;
+                            margin-bottom: 10px;
                         }
                         p{
                             font-size: 17px;
+                            margin-bottom: 10px;
                         }
                         ul{
+                            margin-bottom: 10px;
                             li{
                                 padding: 10px 0px;
                             }

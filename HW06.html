@@ -9,7 +9,6 @@
     <link rel="icon"  href="/image/Shopline/IconSource.ico">
 </head>
 <body>
-    
     <header>
         <div class="top-menu-wrap">
             <div class="top-menu">
@@ -22,7 +21,6 @@
                 </ul>
             </div>
         </div>
-        
         <div class="content-wrap">
             <div class="content">
                 <div class="logo">
@@ -33,7 +31,8 @@
                 <nav>
                     <ul class="main-menu-list">
                         <li>
-                            <label for="open" class="list-property">
+                            <input type="checkbox" id="sub-open">
+                            <label for="sub-open" class="list-property">
                                 開店服務
                                 <i class="fas fa-chevron-down"></i>
                                 <div class="sub-menu sub-menu1">
@@ -43,25 +42,43 @@
                                         <div class="title">
                                             網路開店
                                             <ul>
-                                                <li><a href="#">功能介紹</a></li>
-                                                <li><a href="#">版型主題</a></li>
-                                                <li><a href="#">開店祕技</a></li>
-                                                <li><a href="#">新手問答</a></li>
+                                                <li class="function-icon">
+                                                    <a href="#" >功能介紹</a>
+                                                </li>
+                                                <li class="shape-icon">
+                                                    <a href="#" >版型主題</a>
+                                                </li>
+                                                <li class="opensecret-icon">
+                                                    <a href="#" >開店祕技</a>
+                                                </li>
+                                                <li class="answer-icon">
+                                                    <a href="#" >新手問答</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="title">
                                             社群購物
                                             <ul>
-                                                <li><a href="#">功能介紹</a></li>
-                                                <li><a href="#">新手問答</a></li>
+                                                <li class="function-icon">
+                                                    <a href="#" >功能介紹</a>
+                                                </li>
+                                                <li class="answer-icon">
+                                                    <a href="#" >新手問答</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="title">
                                             零售POS
                                             <ul>
-                                                <li><a href="#">功能介紹</a></li>
-                                                <li><a href="#">周邊硬體</a></li>
-                                                <li><a href="#">新手問答</a></li>
+                                                <li class="function-icon">
+                                                    <a href="#" >功能介紹</a>
+                                                </li>
+                                                <li class="hardware-icon">
+                                                    <a href="#" >周邊硬體</a>
+                                                </li>
+                                                <li class="answer-icon">
+                                                    <a href="#" >新手問答</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -69,7 +86,8 @@
                             </label>
                         </li>
                         <li>
-                            <label for="charge" class="list-property">
+                            <input type="checkbox" id="sub-charge">
+                            <label for="sub-charge" class="list-property">
                                 方案費用
                                 <i class="fas fa-chevron-down"></i>
                                 <div class="sub-menu sub-menu2">
@@ -78,8 +96,12 @@
                                     <div class="sub-menu-content">
                                         <div class="title">
                                             <ul>
-                                                <li><a href="#">開店方案</a></li>
-                                                <li><a href="#">功能模組</a></li>
+                                                <li class="open-icon">
+                                                    <a href="#" >開店方案</a>
+                                                </li>
+                                                <li class="module-icon">
+                                                    <a href="#" >功能模組</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -91,7 +113,8 @@
                         <li><label for="#">開店說明會</label></li>
                         <li><label for="#">開店諮詢</label></li>
                         <li>
-                            <label for="#" class="list-property">
+                            <input type="checkbox" id="sub-solution">
+                            <label for="sub-solution" class="list-property">
                                 更多解決方案
                                 <i class="fas fa-chevron-down"></i>
                                 <div class="sub-menu sub-menu3">
@@ -101,27 +124,49 @@
                                         <div class="title">
                                             進階方案
                                             <ul>
-                                                <li><a href="#">企業旗艦方案</a></li>
-                                                <li><a href="#">跨境電商方案</a></li>
+                                                <li class="company-icon">
+                                                    <a href="#" >企業旗艦方案</a>
+                                                </li>
+                                                <li class="cross-icon">
+                                                    <a href="#" >跨境電商方案</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="title">
                                             數位廣告
                                             <ul>
-                                                <li><a href="#">廣告計劃方案</a></li>
-                                                <li><a href="#">Google廣告</a></li>
-                                                <li><a href="#">Facebook廣告</a></li>
-                                                <li><a href="#">LINE廣告</a></li>
-                                                <li><a href="#">智慧廣告系統</a></li>
+                                                <li class="adv-icon">
+                                                    <a href="#" >廣告計劃方案</a>
+                                                </li>
+                                                <li class="google-icon">
+                                                    <a href="#" >Google廣告</a>
+                                                </li>
+                                                <li class="facebook-icon">
+                                                    <a href="#" >Facebook廣告</a>
+                                                </li>
+                                                <li class="line-icon">
+                                                    <a href="#" >LINE廣告</a>
+                                                </li>
+                                                <li class="AI-icon">
+                                                    <a href="#" >智慧廣告系統</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="title">
                                             功能及產業應用
                                             <ul>
-                                                <li><a href="#">實體零售</a></li>
-                                                <li><a href="#">O2O全通路</a></li>
-                                                <li><a href="#">社交商務</a></li>
-                                                <li><a href="#">社群電商工具包</a></li>
+                                                <li class="retail-icon">
+                                                    <a href="#" >實體零售</a>
+                                                </li>
+                                                <li class="O2O-icon">
+                                                    <a href="#" >O2O全通路</a>
+                                                </li>
+                                                <li class="social-icon">
+                                                    <a href="#" >社交商務</a>
+                                                </li>
+                                                <li class="tool-icon">
+                                                    <a href="#" >社群電商工具包</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -129,7 +174,8 @@
                             </label>
                         </li>
                         <li>
-                            <label for="" class="list-property">
+                            <input type="checkbox" id="sub-other">
+                            <label for="sub-other" class="list-property">
                                 其他資源
                                 <i class="fas fa-chevron-down"></i>
                                 <div class="sub-menu sub-menu4">
@@ -139,27 +185,49 @@
                                         <div class="title">
                                             網店資源
                                             <ul>
-                                                <li><a href="#">開店祕技</a></li>
-                                                <li><a href="#">版型主題</a></li>
-                                                <li><a href="#">新手問答</a></li>
+                                                <li class="opensecret-icon">
+                                                    <a href="#">開店祕技</a>
+                                                </li>
+                                                <li class="shape-icon">
+                                                    <a href="#">版型主題</a>
+                                                </li>
+                                                <li class="answer-icon">
+                                                    <a href="#">新手問答</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="title">
                                             電商知識庫與課程
                                             <ul>
-                                                <li><a href="#">電商教室</a></li>
-                                                <li><a href="#">充電工作坊</a></li>
-                                                <li><a href="#">DreamBig創品牌</a></li>
-                                                <li><a href="#">電商成長學苑</a></li>
+                                                <li class="room-icon">
+                                                    <a href="#">電商教室</a>
+                                                </li>
+                                                <li class="charge-icon">
+                                                    <a href="#">充電工作坊</a>
+                                                </li>
+                                                <li class="brand-icon">
+                                                    <a href="#">DreamBig創品牌</a>
+                                                </li>
+                                                <li class="grow-icon">
+                                                    <a href="#">電商成長學苑</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="title">
                                             影片專區
                                             <ul>
-                                                <li><a href="#">90秒快速了解SHOPLINE</a></li>
-                                                <li><a href="#">90秒快速了解Google廣告計劃</a></li>
-                                                <li><a href="#">關於SHOPLINE電商成長學苑</a></li>
-                                                <li><a href="#">SHOPLINE智慧廣告系統</a></li>
+                                                <li class="vedio-icon">
+                                                    <a href="#">90秒快速了解SHOPLINE</a>
+                                                </li>
+                                                <li class="vedio-icon">
+                                                    <a href="#">90秒快速了解Google廣告計劃</a>
+                                                </li>
+                                                <li class="vedio-icon">
+                                                    <a href="#">關於SHOPLINE電商成長學苑</a>
+                                                </li>
+                                                <li class="vedio-icon">
+                                                    <a href="#">SHOPLINE智慧廣告系統</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -187,9 +255,6 @@
         </div>
     </header>
     <div class="banner">
-        <!-- <div class="banner-img">
-            <img src="/image/Shopline/bannerbg.png" alt="">
-        </div> -->
         <div class="content row">
             <div class="content-txt col-lg-6 col-12">
                 <h1 class="title">想在哪開店創業？</h1>
@@ -215,7 +280,7 @@
             </div>
             <div class="content">
                 <div class="row">
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6 content-pic">
                         <div class="pic">
                             <img src="/image/Shopline/Shopline_01.png" alt="">
                         </div>
