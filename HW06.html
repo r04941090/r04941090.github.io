@@ -243,6 +243,9 @@
                         <div class="login">
                             <a href="#">登入網店</a>
                         </div>
+                        
+                    </div>
+                    <div class="other-button">
                         <ul>
                             <li><a href="#">開店諮詢</a></li>
                             <li><a href="#">開店說明會</a></li>
@@ -733,5 +736,21 @@
         </div>
     </footer>
     <a href="" class="message"></a>
+    <script>
+        let mainMenu = document.getElementById('open-menu');
+        console.log(mainMenu);
+        
+        mainMenu.addEventListener('click', function(){
+            // console.dir(mainMenu);
+            if (mainMenu.checked){
+                // console.log('true');
+                document.body.style.overflow='hidden';
+            }
+            else{
+                // console.log('false');
+                document.body.style.overflow='auto';
+            }
+        })
+    </script>
 </body>
 </html>

@@ -873,9 +873,17 @@ footer{
                                 
                             }
                         }
+                        
+                    }
+                    .other-button{
+                        // margin-left: -0px;
+                        // margin-right: -100px;
+                        margin-top: 20px;
+                        background-color: #172b4d;
                         ul{
+                            
                             background-color: #172b4d;
-                            // margin-top: auto;
+                            margin-top: auto;
                             display: flex;
                             justify-content: space-evenly;
                             width: 100%;
@@ -902,10 +910,8 @@ footer{
                                     text-align: center;
                                 }
                             }
-                            
                         }
                     }
-                    
                 }
                 .free-btn{
                     display: none;

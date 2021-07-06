@@ -1261,8 +1261,13 @@ footer .footer-list .container .row ul ul li a:hover {
     line-height: 50px;
     border-radius: 200px;
   }
-  header .content-wrap .content nav .other ul {
+  header .content-wrap .content nav .other-button {
+    margin-top: 20px;
     background-color: #172b4d;
+  }
+  header .content-wrap .content nav .other-button ul {
+    background-color: #172b4d;
+    margin-top: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1271,14 +1276,14 @@ footer .footer-list .container .row ul ul li a:hover {
             justify-content: space-evenly;
     width: 100%;
   }
-  header .content-wrap .content nav .other ul li {
+  header .content-wrap .content nav .other-button ul li {
     text-align: center;
     line-height: 50px;
     height: 50px;
     width: 50%;
     position: relative;
   }
-  header .content-wrap .content nav .other ul li:before {
+  header .content-wrap .content nav .other-button ul li:before {
     content: "";
     height: 25px;
     width: 1px;
@@ -1289,7 +1294,7 @@ footer .footer-list .container .row ul ul li a:hover {
     top: 0;
     margin: auto;
   }
-  header .content-wrap .content nav .other ul li a {
+  header .content-wrap .content nav .other-button ul li a {
     color: #fff;
     text-decoration: none;
     text-align: center;
