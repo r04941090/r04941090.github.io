@@ -650,7 +650,6 @@ main section .content .row .pic img {
 
 main section .content .row .text {
   width: 100%;
-  height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -678,11 +677,16 @@ main section .content .row .text ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
 }
 
 main section .content .row .text ul li {
   padding: 10px 0px;
-  width: 50%;
+  width: 100%;
   line-height: 1.5;
 }
 
@@ -712,6 +716,7 @@ main section .content .row .text a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 40px;
 }
 
 main section .content .row .text a:hover .line-extension:before {
@@ -2620,8 +2625,13 @@ footer .footer-list .container .row ul ul li a:hover {
   }
   main section .content .row .text ul {
     margin-bottom: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   main section .content .row .text ul li {
+    width: 50%;
     padding: 10px 0px;
   }
   .information section h2 {

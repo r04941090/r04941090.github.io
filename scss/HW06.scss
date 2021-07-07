@@ -310,7 +310,7 @@ main{
                 }
                 .text{
                     width: 100%;
-                    height: 400px;
+                    // height: 400px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
@@ -325,9 +325,11 @@ main{
                     ul{
                         display: flex;
                         flex-wrap: wrap;
+                        flex-direction: column;
+                        margin-bottom: 10px;
                         li{
                             padding: 10px 0px;
-                            width: 50%;
+                            width: 100%;
                             line-height: 1.5;
                             &::before{
                                 width: 20px;
@@ -353,6 +355,7 @@ main{
                         display: flex;
                         align-items: center;
                         // border: 1px solid red;
+                        margin-bottom: 40px;
                         &:hover{
                             .line-extension{
                                 &:before{
@@ -677,7 +680,9 @@ footer{
     }
     
 }
-@media screen and (min-width: 768px){}
+@media screen and (min-width: 576px){
+    
+}
 @media screen and (max-width: 991px){
     #sub-open:checked{
         & ~ .list-property{
@@ -2446,7 +2451,9 @@ footer{
                         }
                         ul{
                             margin-bottom: 10px;
+                            flex-direction: row;
                             li{
+                                width: 50%;
                                 padding: 10px 0px;
                             }
                         }
