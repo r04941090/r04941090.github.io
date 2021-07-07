@@ -680,10 +680,22 @@ footer{
     }
     
 }
-@media screen and (min-width: 576px){
-    
-}
 @media screen and (max-width: 991px){
+    // main{
+    //     section{
+    //         .content{
+    //             .text{
+    //                 ul{
+    //                     flex-direction: row;
+    //                     li{
+    //                         padding: 20px 10px;
+    //                         width: 50%;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
     #sub-open:checked{
         & ~ .list-property{
             .fas{
@@ -1290,6 +1302,7 @@ footer{
             }
         }
     }
+    
     footer{
         .footer-list{
             .container{
