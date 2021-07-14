@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,AAAA,CACT,QAAQ,CAAE,IAAI,CACd,MAAM,CAAE,KAAK,CAShB,AAXD,AAGI,aAHS,AAGR,mBAAmB,AAAC,CACjB,OAAO,CAAE,IAAI,CAChB,AALL,AAOI,aAPS,CAOT,gBAAgB,AAAA,CACZ,MAAM,CAAE,IAAI,CACZ,WAAW,CAAE,IAAI,CACpB",
+    "sources": [
+        "../../Javascript練習/scss/猜數字.scss"
+    ],
+    "names": [],
+    "file": "猜數字.min.css"
+}

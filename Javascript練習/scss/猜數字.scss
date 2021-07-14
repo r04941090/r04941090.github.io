@@ -1,0 +1,12 @@
+.listProperty{
+    overflow: auto;
+    height: 200px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    // 讓scrollbar隱藏
+    .list-group-item{
+        height: 40px;
+        line-height: 10px;
+    }
+}

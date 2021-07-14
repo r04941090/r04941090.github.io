@@ -1,0 +1,61 @@
+.container {
+  width: 700px;
+  height: 500px;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.container .box {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .box .prompt {
+  width: 600px;
+  height: 200px;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 200px;
+  font-size: 40px;
+}
+
+.container .box .generateNumber {
+  margin: 10px 0px;
+  padding: 10px;
+  width: 100px;
+  background-color: #3077d4;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.container .box .enterNumber {
+  cursor: auto;
+}
+
+.container .box .btn-group {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 120px;
+}
+
+.container .box .btn-group .btn {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+/*# sourceMappingURL=終極密碼.css.map */

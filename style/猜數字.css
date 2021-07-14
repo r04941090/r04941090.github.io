@@ -1,0 +1,14 @@
+.listProperty {
+  overflow: auto;
+  height: 200px;
+}
+
+.listProperty::-webkit-scrollbar {
+  display: none;
+}
+
+.listProperty .list-group-item {
+  height: 40px;
+  line-height: 10px;
+}
+/*# sourceMappingURL=猜數字.css.map */

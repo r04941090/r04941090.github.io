@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAA;EACT,QAAQ,EAAE,IAAI;EACd,MAAM,EAAE,KAAK;CAShB;;AAXD,AAGI,aAHS,AAGR,mBAAmB,CAAC;EACjB,OAAO,EAAE,IAAI;CAChB;;AALL,AAOI,aAPS,CAOT,gBAAgB,CAAA;EACZ,MAAM,EAAE,IAAI;EACZ,WAAW,EAAE,IAAI;CACpB",
+    "sources": [
+        "../Javascript練習/scss/猜數字.scss"
+    ],
+    "names": [],
+    "file": "猜數字.css"
+}

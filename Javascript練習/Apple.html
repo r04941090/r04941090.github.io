@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/Apple.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Hello, world!</title>
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-11 m-auto">
+                    <div class="Custom d-flex justify-content-between align-items-center py-2 ">
+                        <input type="checkbox" id="showMenu">
+                        <label class="hamburger" for="showMenu">
+                            <span class="top"></span>
+                            <span class="bottom"></span>
+                        </label>
+                        <a href="" class="logo fab fa-apple icon text-white"></a>
+                        <div class="header-list-box">
+                            <div class="container-fluid search">
+                                <input type="text" class="searchText form-control">
+                            </div>
+                            <ul class="header-list">
+                                <li>
+                                    <a href="" class="text-white">Mac</a>
+                                </li>
+                                <li>
+                                    <a href="" class="text-white">iPad</a>
+                                </li>
+                                <li>
+                                    <a href="" class="text-white">iPhone</a>
+                                </li>
+                                <li><a href="" class="text-white">Watch</a></li>
+                                <li><a href="" class="text-white">TV</a></li>
+                                <li><a href="" class="text-white">Music</a></li>
+                                <li><a href="" class="text-white">支援服務</a></li>
+                                <li>
+                                    <a href="" class="fas fa-search searchIcon text-white"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="shop-cart fas fa-shopping-cart icon"></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </header>
+    <div class="container-fluid border-bottom bg-white header-info position-sticky top-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-11 m-auto">
+                    <div class="bg-white text-dark m-auto">
+                        <div class="row p-3 justify-content-center align-items-start px-2">
+                            <div class="col-6 px-0 fw-bold">
+                                iPhone 12 Pro
+                            </div>
+                            <div class="col-6 text-end px-0">
+                                NT $<span class="totalPrice">44,400</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center py-3 bg-light">
+        可申請最長達12個月的零利率分期付款。
+        <a href="" >進一步了解 ></a>
+    </div>
+    <main class="container m-auto">
+        <div class="row">
+            <div class="col-11 m-auto">
+                <div class="row align-items-start">
+                    <div class="col-md-6 imageBox">
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-graphite-hero?wid=940&hei=1112&fmt=png-alpha&.v=1604021660000" alt="" class="w-100" id="image">
+                    </div>
+                    <div class="col col-md-6" data-bs-offset="100" >
+                        <div class="title order-sm-1">
+                            <h6>全新</h6>
+                            <h1 class="mb-5">購買iPhone 12 Pro</h1>
+                            <h5 class="mb-3">選擇機型。</h5>
+                        </div>
+                        <h6 class="mb-3">
+                            <a href="" style="text-decoration: none;">哪一款機型最適合你？</a>
+                        </h6>
+                        <div class="row" id="type-group">
+                            <div class="col-12">
+                                <input type="checkbox" class="btn-check" name="iphoneType" id="iphone12Pro" value = "iphone12Pro">
+                                <label for="iphone12Pro" class="btn btn-border-color w-100 d-flex justify-content-between align-items-center p-3 mb-2" checked>
+                                    <div class="phoneInfo d-flex-column ">
+                                        <div class="phoneName fs-5 fw-bold">iPhone 12 Pro</div>
+                                        <p class="m-0 text-start fs-6">6.1吋顯示器</p>
+                                    </div>
+                                    <div class="phonePrice">
+                                        <div class="phonePrice">NT $33,900起</div>
+                                    </div>
+                                </label>
+                                <input type="checkbox" class="btn-check" name="iphoneType" id="iphone12ProMax" value = "iphone12ProMax">
+                                <label for="iphone12ProMax" class="btn btn-border-color w-100 d-flex justify-content-between align-items-center p-3" checked>
+                                    <div class="phoneInfo d-flex-column ">
+                                        <div class="phoneName fs-5 fw-bold">iPhone 12 Pro Max</div>
+                                        <p class="m-0 text-start fs-6">6.7吋顯示器</p>
+                                    </div>
+                                    <div class="phonePrice">
+                                        <div class="phonePrice">NT $37,900起</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <h5 class="my-4">選擇外觀。</h5>
+                        <div class="row" id="color-group">
+                            <div class="col-6 mb-2">
+                                <input type = "checkbox" class="btn-check" name="options" id="optionDark" value = "darkImage">
+                                <label class="btn btn-border-color bg-light text-dark p-4 w-100" autocomplete="off" for="optionDark" checked>
+                                    <div class="darkColorImg">
+                                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-graphite-2020?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601054548000" width= 30 alt="">
+                                    </div>
+                                    石墨色
+                
+                                </label>
+                            </div>
+                            <div class="col-6">
+                                <input type = "radio" class="btn-check" name="options" id="optionSilver" value = "silverImage"></input>
+                                <label class="btn btn-border-color bg-light text-dark p-4 w-100" for="optionSilver" autocomplete="off" checked>
+                                    <div class="darkColorImg">
+                                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-silver-2020?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601054548000" width= 30 alt="">
+                                    </div>
+                                    銀色
+                
+                                </label>
+                            </div>
+                            <div class="col-6">
+                                <input type = "radio" class="btn-check" name="options" id="optionGold" value = "goldImage"></input>
+                                <label class="btn btn-border-color bg-light text-dark p-4 w-100" for="optionGold" autocomplete="off" checked>
+                                    <div class="darkColorImg">
+                                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-gold-2020?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601054548000" width= 30 alt="">
+                                    </div>
+                                    金色
+                
+                                </label>
+                            </div>
+                            <div class="col-6">
+                                <input type = "radio" class="btn-check" name="options" id="optionBlue" value = "blueImage"></input>
+                                <label class="btn btn-border-color bg-light text-dark p-4 w-100" for="optionBlue" autocomplete="off" checked>
+                                    <div class="darkColorImg">
+                                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-blue-2020?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601054547000" width= 30 alt="">
+                                    </div>
+                                    太平洋藍色
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <h5 class="my-4">選擇儲存容量。</h5>
+                        <h6 class="mb-3">
+                            <a href="" style="text-decoration: none;">你需要多少儲存容量？</a>
+                        </h6>
+                        <div class="row" id="capacity-group">
+                            <div class="col-6 mb-3">
+                                <input type = "radio" class="btn-check" name="capacity" id="capacity_128" value="128"></input>
+                                <label class="btn btn-border-color bg-light text-dark p-3 w-100" for="capacity_128" autocomplete="off" checked>
+                                    <span class="fs-4 fw-bold">128</span>
+                                    <span class="fs-6 fw-bold">GB</span>
+                                    <span class="d-block fs-6">
+                                        NT $<span id="Price_128">33,900</span>
+                                    </span>
+                
+                                </label>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <input type = "radio" class="btn-check" name="capacity" id="capacity_256" value="256"></input>
+                                <label class="btn btn-border-color bg-light text-dark p-3 w-100" for="capacity_256" autocomplete="off" checked>
+                                    <span class="fs-4 fw-bold">256</span>
+                                    <span class="fs-6 fw-bold">GB</span>
+                                    <span class="d-block fs-6">
+                                        NT $<span id="Price_256">37,400</span>
+                                    </span>
+                
+                                </label>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <input type = "radio" class="btn-check" name="capacity" id="capacity_512" value="512"></input>
+                                <label class="btn btn-border-color bg-light text-dark p-3 w-100" for="capacity_512" autocomplete="off" checked>
+                                    <span class="fs-4 fw-bold">512</span>
+                                    <span class="fs-6 fw-bold">GB</span>
+                                    <span class="d-block fs-6">
+                                        NT $<span id="Price_512">44,000</span>
+                                    </span>
+                
+                                </label>
+                            </div>
+                        </div>
+                        <div class="priceInfo bg-light p-3">
+                            <div class="fs-3">NT$
+                                <span class="totalPrice">33,900</span>
+                            </div>
+                            <div class="tax">含加值營業稅：約 NT$<span id="tax">1,614</span></div>
+                            <div class="pricePerMonth text-primary">
+                                <a href="">
+                                    每月 NT$<span id="pricePerMonth">2,825</span> 起12
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/Javascript練習/js/Apple_simple.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>

@@ -1,0 +1,47 @@
+.container{
+    width: 700px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    .box{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .prompt{
+            width: 600px;
+            height: 200px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 200px;
+            font-size: 40px;
+        }
+        .generateNumber{
+            margin: 10px 0px ;
+            padding: 10px;
+            width: 100px;
+            background-color: rgb(48, 119, 212);
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .enterNumber{
+            cursor: auto;
+            // background-color: red;
+            
+        }
+        .btn-group{
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 120px;
+            .btn{
+                width: 30px;
+                height: 30px;
+                margin: 5px;
+                
+            }
+        }
+    }
+}
