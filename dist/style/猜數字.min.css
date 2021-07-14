@@ -1,2 +1,2 @@
-.listProperty{overflow:auto;height:200px}.listProperty::-webkit-scrollbar{display:none}.listProperty .list-group-item{height:40px;line-height:10px}
+.container .row .col-8 .btn-group{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.container .row .col-8 .listProperty{overflow:auto;height:200px}.container .row .col-8 .listProperty::-webkit-scrollbar{display:none}.container .row .col-8 .listProperty .list-group-item{height:40px;line-height:10px}@media screen and (max-width: 575px){.container .row .col-8 .btn-group{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}}
 /*# sourceMappingURL=猜數字.min.css.map */
