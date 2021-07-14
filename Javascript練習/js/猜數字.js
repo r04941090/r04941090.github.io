@@ -28,6 +28,7 @@ function resetFunction(){
     elreset.disabled = true;
     elguess.disabled = true;
     revealFunction();
+    answer = [];
 }
 function getAnswer(){
     let rndNumber;
