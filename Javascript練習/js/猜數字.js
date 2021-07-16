@@ -98,6 +98,7 @@ function updateHTML(A, B){
 function numberRule(){
     let alertDialogs = [];
     let r = /^\d+$/;
+    // /^\d{4}/
     if(eluserAnswer.value.split('').length != 4){
         alertDialogs.push('請確認輸入的長度')
     }
