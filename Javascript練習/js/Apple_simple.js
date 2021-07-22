@@ -26,6 +26,8 @@ window.onload = function(){
         })
 }
 function updateColor(e){
+    console.log(e.target.nodeName);
+    
     // console.log('aa', this);
     if(e.target.nodeName == 'INPUT'){
         let colorInput = document.querySelectorAll('#color-group input');
