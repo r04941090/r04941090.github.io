@@ -24,10 +24,16 @@
         .card:hover .card-img-top{
             transform: scale(1.1);
         }
+        .page-link:focus{
+            box-shadow: none;
+        }
     </style>
 </head>
 <body>
     <div id="app">
+        <div class="container-fluid bg-primary text-center p-4 text-white fs-3">
+            高雄景點
+        </div>
         <div class="container">
             <div class="row">
                 <card-component v-for="item in showData" :key="item.Id" v-bind="item"></card-component>
