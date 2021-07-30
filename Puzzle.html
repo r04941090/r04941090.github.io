@@ -284,6 +284,7 @@
             if(answer.length == rawdata.length){
                 li[li.length - 1].style.display = 'block'
                 imageShow(100)
+                autoSolve.classList.add('disabled')
             }
         }
         function imageShow(length){
@@ -321,6 +322,7 @@
             cover.classList.remove('cover')
             cover.innerHTML = ''
             li[li.length - 1].style.transform = 'translate(100px)'
+            autoSolve.classList.remove('disabled')
             for(let i = 0; i < difficulty.data[difficulty.current]; i++){
                 checkMovable()
                 let rnd;
