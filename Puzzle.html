@@ -38,10 +38,12 @@
         ul{
             display: flex;
             flex-wrap: wrap;
-            width: 100%;
-            height: 100%;
+            width: 300px;
+            height: 300px;
             font-size: 0;
             overflow: hidden;
+            padding: 0;
+            position: relative;
         }
         li{
             /* border: 1px solid black; */
@@ -61,6 +63,8 @@
             position: absolute;
             top: 0;
             left: 0;
+            right: 0;
+            margin: auto;
             z-index: 1;
             font-size: 20px;
             text-align: center;
@@ -69,15 +73,26 @@
             color: #fff;
             border-radius: 5px;
         }
+        .container{
+            margin-top: 30px;
+        }
+        .row{
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 767px) {
+            .container{
+                margin: 0;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container border mt-2 pb-3 bg-light rounded">
+    <div class="container border pb-3 bg-light rounded">
         <p class="text-center w-100 p-2 border-bottom border-secondary fs-5">拼圖小遊戲</p>
-        <div class="row mt-5 justify-content-center">
+        <div class="row justify-content-center">
             <div class="col-lg-6 d-flex justify-content-center mb-3">
                 <div class="d-flex-column justify-content-center align-items-center">
-                    <form id="difficultyForm">
+                    <form id="difficultyForm" class="my-2">
                         難易度：
                         <label class="me-2">
                             <input type="radio" name="difficult" value="easy" checked>
@@ -96,7 +111,7 @@
                             極困難
                         </label>
                     </form>
-                    <form id="cutForm">
+                    <form id="cutForm" class="my-2">
                         切割大小：
                         <label class="me-2">
                             <input type="radio" name="difficult" value="3" checked>
@@ -115,15 +130,15 @@
                             6 x 6
                         </label>
                     </form>
-                    <div class="d-flex justify-content-between w-100">
+                    <div class="d-flex justify-content-between w-100 my-2">
                         <button id="start" class="btn btn-outline-secondary btn-sm w-100 m-1">開始</button>
                         <button id="autoSolve" class="btn btn-outline-secondary btn-sm w-100 m-1 disabled">自動排列</button>
                         <button id="changeImage" class="btn btn-outline-secondary btn-sm w-100 m-1 ">換一張圖</button>
                     </div>
                     
-                    <div class="position-relative">
+                    <div class="position-relative box d-flex justify-content-center align-items-center mx-auto">
                         <div id="cover"></div>
-                        <ul class="box"></ul>
+                        <ul class="m-auto"></ul>
                     </div>
                 </div>
             </div>
@@ -189,7 +204,7 @@
             ]
             cover.classList.add('cover')
             autoSolve.classList.add('disabled')
-            cover.innerHTML = '請按下"開始"'
+            cover.innerHTML = '請"觸碰"或按下"開始"'
             let fragment = document.createDocumentFragment()
             for(let i = 0; i < divide; i++){
                 for(let j = 0; j < divide; j++){
@@ -313,7 +328,7 @@
                 setTimeout(() => {
                     autoSolve.classList.add('disabled')
                     cover.classList.add('cover')
-                    cover.innerHTML = '請按下"開始"'
+                    cover.innerHTML = '請"觸碰"或按下"開始"'
                     resolve()
                 }, 40);
             })
