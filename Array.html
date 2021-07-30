@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [
+            {
+                name:1,
+                coordinate:{
+                    x:0,
+                    y:100
+                }
+            },
+            {
+                name:2,
+                coordinate:{
+                    x:100,
+                    y:100
+                }
+            },
+            {
+                name:3,
+                coordinate:{
+                    x:200,
+                    y:100
+                }
+            },
+            {
+                name:4,
+                coordinate:{
+                    x:200,
+                    y:200
+                }
+            }
+        ]
+        let data = [
+            {
+                "name": 1,
+                "coordinate": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            {
+                "name": 2,
+                "coordinate": {
+                    "x": 100,
+                    "y": 0
+                }
+            },
+            {
+                "name": 3,
+                "coordinate": {
+                    "x": 200,
+                    "y": 0
+                }
+            },
+            {
+                "name": 4,
+                "coordinate": {
+                    "x": 0,
+                    "y": 100
+                }
+            },
+            {
+                "name": 5,
+                "coordinate": {
+                    "x": 100,
+                    "y": 100
+                }
+            },
+            {
+                "name": 6,
+                "coordinate": {
+                    "x": 200,
+                    "y": 100
+                }
+            },
+            {
+                "name": 7,
+                "coordinate": {
+                    "x": 0,
+                    "y": 200
+                }
+            },
+            {
+                "name": 8,
+                "coordinate": {
+                    "x": 100,
+                    "y": 200
+                }
+            }
+        ]
+        let test = [
+            {
+                "newX": 200,
+                "newY": 200
+            },
+            {
+                "newX": 0,
+                "newY": 200
+            },
+            {
+                "newX": 100,
+                "newY": 300
+            },
+            {
+                "newX": 100,
+                "newY": 400
+            }
+        ]
+        data = JSON.parse(JSON.stringify(data))
+        test = JSON.parse(JSON.stringify(test))
+        console.log(data, test);
+        
+        // let result = [{itemX:100, itemY:100}, {itemX:200, itemY:200}]
+        let get = JSON.parse(JSON.stringify(data)).filter(item => test.find(element => element.newX == item.coordinate.x && element.newY == item.coordinate.y))
+        console.log(get);
+        data[6].coordinate.x = 200;
+        console.log(get);
+    </script>
+</body>
+</html>

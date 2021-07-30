@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        *{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        html, body{
+            background: #000;
+        }
+        .imageBox{
+            width: 500px;
+            height: 500px;
+        }
+        .imageBox img{
+            width: 100%;
+        }
+        .box{
+            /* background-color: #fa0; */
+            border: 1px solid rgba(0, 0, 0, .2);
+            width: 300px;
+            height: 300px;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            font-size: 0;
+        }
+        li{
+            /* border: 1px solid black; */
+            box-sizing: border-box;
+            position: absolute;
+            font-size: 50px;
+            line-height: 100px;
+            text-align: center;
+            background-size: 300px 300px;
+        }
+        .btn:focus, .btn-outline-secondary:focus{
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container border mt-2 pb-3 bg-light rounded">
+        <p class="text-center w-100 p-2 border-bottom border-secondary fs-5">拼圖小遊戲</p>
+        <div class="row mt-5 justify-content-center">
+            <div class="col-lg-6 d-flex justify-content-center mb-3">
+                <div>
+                    <form id="difficultyForm">
+                        難易度：
+                        <label class="me-2">
+                            <input type="radio" name="difficult" value="easy" checked>
+                            簡單
+                        </label>
+                        <label class="me-2">
+                            <input type="radio" name="difficult" value="medium">
+                            中等
+                        </label>
+                        <label class="me-2">
+                            <input type="radio" name="difficult" value="hard">
+                            困難
+                        </label>
+                    </form>
+                    <form id="cutForm">
+                        切割大小：
+                        <label class="me-2">
+                            <input type="radio" name="difficult" value="3" checked>
+                            3 x 3
+                        </label>
+                        <label class="me-2">
+                            <input type="radio" name="difficult" value="4" >
+                            4 x 4
+                        </label>
+                        <label class="me-2">
+                            <input type="radio" name="difficult" value="5">
+                            5 x 5
+                        </label>
+                    </form>
+                    <div class="d-flex justify-content-between">
+                        <button id="start" class="btn btn-outline-secondary btn-sm w-100 m-1">開始</button>
+                        <button id="autoSolve" class="btn btn-outline-secondary btn-sm w-100 m-1 disabled">自動排列</button>
+                        <button id="changeImage" class="btn btn-outline-secondary btn-sm w-100 m-1 ">換一張圖</button>
+                    </div>
+                    <div class="box">
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 justify-content-center d-flex">
+                <div class="imageBox">
+                    <img src="https://picsum.photos/500/500/?random=1" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let perWidth, perHeight, li, url
+        let width = 300;
+        let height = 300;
+        let divide = 3;
+        let data = []
+        let rawdata = []
+        let indexName = 0;
+        let empty = {}
+        let answerProcess = []
+        let canMove = []
+        let matrix
+        let difficulty = {
+            current: 'easy',
+            data:{
+                easy: 5,
+                medium: 20,
+                hard: 30
+            }
+        }
+        let ul = document.querySelector('ul');
+        let autoSolve = document.querySelector('#autoSolve');
+        let start = document.querySelector('#start');
+        let imageBtn = document.querySelector('#changeImage');
+        let difficultyForm = document.querySelector('#difficultyForm');
+        let cutForm = document.querySelector('#cutForm');
+        window.onload = () => {
+            initial()
+            changeImage()
+            start.addEventListener('click', set)
+            autoSolve.addEventListener('click', solve)
+            ul.addEventListener('click', changePosition)
+            imageBtn.addEventListener('click', changeImage)
+            difficultyForm.addEventListener('click', changeDifficulty)
+            cutForm.addEventListener('click', changeCut)
+        }
+        function initial(){
+            ul.innerHTML = ''
+            indexName = 0
+            data = []
+            perWidth = width / divide;
+            perHeight = height / divide
+            matrix = [
+                {elementX: perWidth, elementY: 0},
+                {elementX: perWidth * (-1), elementY: 0},
+                {elementX: 0 , elementY: perHeight},
+                {elementX: 0, elementY: perHeight * (-1)},
+            ]
+            let fragment = document.createDocumentFragment()
+            for(let i = 0; i < divide; i++){
+                for(let j = 0; j < divide; j++){
+                    let itemX = perWidth * j;
+                    let itemY = perHeight * i
+                    let li = document.createElement('li')
+                    li.style.left = itemX + 'px'
+                    li.style.top = itemY + 'px'
+                    li.style['background-position'] = `left ${itemX * (-1)}px top ${itemY * (-1)}px`
+                    li.style.width = `${perWidth}px`
+                    li.style.height = `${perHeight}px`
+                    li.style['background-image'] = `url(${url})`
+                    li.id = indexName
+                    // 更新圖片位置
+                    // 用dir找方法
+                    
+                    fragment.appendChild(li)
+                    if((i + 1) * (j + 1) == Math.pow(divide, 2)){
+                        empty.x = itemX
+                        empty.y = itemY
+                    }
+                    else{
+                        data.push({
+                            name: indexName,
+                            coordinate:{
+                                x: itemX,
+                                y: itemY
+                            }
+                        })
+                    }
+                    indexName++
+                }
+            }
+            ul.appendChild(fragment)
+            rawdata = JSON.parse(JSON.stringify(data));
+        }
+        function changeImage(){
+            let rnd = Math.floor(Math.random() * 10000)
+            let image = document.querySelector('img');
+            url = `https://picsum.photos/500/500/?random=${rnd}`
+            image.src = ''
+            console.log(Array.from(ul.children))
+            Array.from(ul.children).forEach(item => {
+                item.style['background-image'] = `url(${url})`
+                image.src = url
+            })
+            initial()
+        }
+        function changeDifficulty(e){
+            e.stopPropagation();
+            if(e.target.nodeName == "INPUT"){
+                difficulty.current = e.target.value
+                console.log(difficulty);
+                
+            }
+        }
+        function changeCut(e){
+            e.stopPropagation();
+            if(e.target.nodeName == "INPUT"){
+                divide = e.target.value
+                console.log(divide);
+                initial()
+            }
+        }
+        function changePosition(e){
+            if(e.target.nodeName == 'LI'){
+                checkMovable();
+                let selectedItem = canMove.filter(item => parseInt(e.target.style.left.split('px')[0]) == item.coordinate.x &&
+                                                        parseInt(e.target.style.top.split('px')[0]) == item.coordinate.y)
+                if(selectedItem.length !== 0){
+                    console.log('can move');
+                    // 建立暫存
+                    let tempX = empty.x 
+                    let tempY = empty.y
+                    let index = parseInt(e.target.id)
+                    // 更新空格
+                    empty.x = parseInt(e.target.style.left.split('px')[0])
+                    empty.y = parseInt(e.target.style.top.split('px')[0])
+                    // 更新data
+                    data[index].coordinate.x = tempX
+                    data[index].coordinate.y = tempY
+                    // 更新畫面
+                    e.target.style.left = tempX + 'px'
+                    e.target.style.top = tempY + 'px'
+                    answerProcess.push(parseInt(index))
+                    console.log(answerProcess);
+                }
+                checkFinish()
+            }
+        }
+        function checkFinish(){
+            let answer = rawdata.filter((item, index) => (item.coordinate.x == data[index].coordinate.x) && (item.coordinate.y == data[index].coordinate.y))
+            console.log(rawdata.length,answer.length);
+            if(answer.length == rawdata.length){
+                li[li.length - 1].style.display = 'block'
+                imageShow(100)
+            }
+        }
+        function imageShow(length){
+            lastImageMove(length).then(res => {
+                if(res < 0){
+                    console.log(res);
+                    return
+                }
+                imageShow(res)
+            })
+        }
+        function lastImageMove(length){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    li[li.length - 1].style.transform = `translate(${length}px)`
+                    resolve(length - 10)
+                }, 20);
+            })
+        }
+        function checkMovable(){
+            // 找出可以用的matirx
+            let updataMatix = matrix
+                    .map(item => { return {newX: item.elementX + empty.x, newY: item.elementY + empty.y}})
+            // 選出符合條件的data
+            let results = JSON.parse(JSON.stringify(data)).filter(item => updataMatix.find(element => element.newX == item.coordinate.x && element.newY == item.coordinate.y))
+            // 深淺拷貝
+            canMove = results
+            
+        }
+        function set(){
+            initial()
+            autoSolve.classList.remove('disabled')
+            answerProcess = []
+            li = document.querySelectorAll('li');
+            li[li.length - 1].style.transform = 'translate(100px)'
+            for(let i = 0; i < difficulty.data[difficulty.current]; i++){
+                checkMovable()
+                let rnd;
+                if(answerProcess.length !== 0){
+                    // 判斷是否為前一次選到的資料
+                    let last = answerProcess[answerProcess.length - 1]
+                    let index = canMove.findIndex(item => item.name == last)
+                    if(index !== -1){
+                        canMove.splice(index, 1)
+                    }
+                    rnd = Math.floor(Math.random() * canMove.length)
+                }
+                else{
+                    rnd = Math.floor(Math.random() * canMove.length)
+                }
+                console.log(rnd);
+                console.log('can', canMove);
+                
+                let selectedIndex = canMove[rnd].name
+                answerProcess.push(selectedIndex)
+                // 更新移動後的資料
+                li[selectedIndex].style.left = empty.x + 'px'
+                li[selectedIndex].style.top = empty.y + 'px'
+                // 更新data
+                data[selectedIndex].coordinate.x = empty.x
+                data[selectedIndex].coordinate.y = empty.y
+                // 更新空格
+                empty.x = canMove[rnd].coordinate.x
+                empty.y = canMove[rnd].coordinate.y
+            }
+            console.log(answerProcess);
+            checkFinish()
+        }
+        // 遞迴移動
+        function solve(){
+            autoMove()
+                .then(() => {
+                    if(answerProcess.length == 0){
+                        return 
+                    }
+                    solve()
+                })
+        }
+        // 針對answerProcess的陣列移動
+        function autoMove(){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    //動作流程
+                    
+                    let selectIndex = answerProcess.pop()
+                    
+                    let tempX = [...data][selectIndex].coordinate.x
+                    let tempY = [...data][selectIndex].coordinate.y
+                    // 用淺複製，避免原始數值更改後，這邊也會受到影響
+                    
+                    data[selectIndex].coordinate.x = empty.x
+                    data[selectIndex].coordinate.y = empty.y
+                    empty.x = tempX
+                    empty.y = tempY
+                    
+                    li[selectIndex].style.left = data[selectIndex].coordinate.x + 'px'
+                    li[selectIndex].style.top = data[selectIndex].coordinate.y + 'px'
+                    checkFinish()
+                    
+                    resolve()
+                }, 200);
+            })
+        }
+    </script>
+</body>
+</html>
