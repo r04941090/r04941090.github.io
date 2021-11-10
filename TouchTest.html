@@ -11,8 +11,9 @@
 </head>
 <body>
   <div id="app" >
-    {{123}}
-    <div  class="border" v-on:mousedown="aa()" v-on:mousemove="bb()" v-on:mouseup="cc()" @touchstart="gtouchstart()" @touchmove="gtouchmove()" @touchend="gtouchend()">tset</div>
+    <div style="height: 400px; width: 80px; border: 1px solid red;">
+      <div  class="border position-absolute" v-on:mousedown="aa()" v-on:mousemove="bb()" v-on:mouseup="cc()" @touchstart="gtouchstart()" @touchmove="gtouchmove()" @touchend="gtouchend()" style="user-select: none; width: 60px; height: 60px;">tset</div>
+    </div>
     <textarea name="" id="" cols="30" rows="10" v-model="result"></textarea>
   </div>
   <script>
@@ -31,6 +32,7 @@
         gtouchmove(){
           console.log('2');
           this.result = this.result.concat('2')
+          
         },
         gtouchend(){
           console.log('3');
