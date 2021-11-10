@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
-        .imageInfo{
+        .imageInfo {
             transform: scale(1);
             transition: .5s;
-            
+
         }
-        .imgBox{
+
+        .imgBox {
             overflow: hidden;
         }
-        .card:hover .imageInfo{
+
+        .card:hover .imageInfo {
             transform: scale(1.2);
         }
-        .card:hover .card-body{
+
+        .card:hover .card-body {
             background-color: #0fa;
         }
-        .card-body{
+
+        .card-body {
             background-color: #fa0;
         }
-        .card{
+
+        .card {
             overflow: hidden;
         }
-        .card{
+
+        .card {
             margin: 0px 5px;
         }
-        .card-title{
+
+        .card-title {
             font-size: 18px;
         }
-        .description{
+
+        .description {
             overflow: hidden;
             display: -webkit-box;
             -webkit-line-clamp: 3;
@@ -41,46 +51,52 @@
             font-size: 14px;
             cursor: default;
         }
-        .row > i {
+
+        .row>i {
             width: 18rem;
             margin: 0px 5px;
         }
-        .cardData{
-                justify-content: space-between;
-            }
-        @media screen and (max-width: 767px){
-            #fetch{
+
+        .cardData {
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width: 767px) {
+            #fetch {
                 width: 100%;
                 margin-bottom: 10px;
                 display: block;
             }
-            #xhr{
+
+            #xhr {
                 width: 100%;
                 display: block;
             }
-            .cardData{
+
+            .cardData {
                 justify-content: center;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container-fluid py-5 text-center bg-primary fs-3 fw-bold mb-2">
         LOL英雄聯盟圖鑑
     </div>
     <div class="container-fluid">
-        <button type="button" id="fetch" class="px-3 me-2" >Ajax Call Lol英雄聯盟API (fetch)</button>
-        <button type="button" id="xhr" class="px-3" >Ajax Call Lol英雄聯盟API (xhr)</button>
+        <button type="button" id="fetch" class="px-3 me-2">Ajax Call Lol英雄聯盟API (fetch)</button>
+        <button type="button" id="xhr" class="px-3">Ajax Call Lol英雄聯盟API (xhr)</button>
     </div>
     <!-- <button type="button" id="show">隱藏/顯示</button> -->
     <div class="container-fluid">
         <!-- <div class="out d-flex justify-content-center w-100"> -->
-            <div class="row cardData" id="box" style="visibility: hidden;">
-                <!-- style="visibility: hidden;" -->
-            </div>
+        <div class="row cardData" id="box" style="visibility: hidden;">
+            <!-- style="visibility: hidden;" -->
+        </div>
         <!-- </div> -->
     </div>
-    
+
     <template id="cardLol">
         <div class="card p-0 mt-2 rounded-3" style="width: 18rem;">
             <div class="imgBox">
@@ -88,11 +104,12 @@
             </div>
             <div class="card-body bg">
                 <h5 class="card-title bg-dark text-white px-1 py-1 rounded">
-                    <span id="count"></span>: 
-                    <span id="engName" class="ms-1"></span> - 
+                    <span id="count"></span>:
+                    <span id="engName" class="ms-1"></span> -
                     <span id="chName"></span>
                 </h5>
-                <p class="card-text description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text description">Some quick example text to build on the card title and make up the bulk
+                    of the card's content.</p>
                 <a href="#" class="btn btn-primary detail" data-bs-toggle="modal" data-bs-target="#detailModal">詳細</a>
                 <a href="#" class="btn btn-danger vedio" data-bs-toggle="modal" data-bs-target="#vedioModal">影片</a>
             </div>
@@ -105,10 +122,10 @@
                     <h5 class="detail-modal-title" id="detailModalLabel"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            <div class="modal-body">
-                <img src="" alt="" id="lolImage" class="w-100">
-                <p id="description" class="mt-2"></p>
-            </div>
+                <div class="modal-body">
+                    <img src="" alt="" id="lolImage" class="w-100">
+                    <p id="description" class="mt-2"></p>
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
@@ -122,12 +139,15 @@
                     <h5 class="vedio-modal-title"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            <div class="modal-body">
-                <div class="w-100">
-                    <iframe class="w-100" height="300" src="https://www.youtube.com/embed/G9wyQ3ZwxII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="modal-body">
+                    <div class="w-100">
+                        <iframe class="w-100" height="300" src="https://www.youtube.com/embed/G9wyQ3ZwxII"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
                 </div>
-                
-            </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
@@ -139,18 +159,18 @@
         let namesArray = []
         let championsObject = {}
         let method = ''
-        window.onload = function(){ 
-            
+        window.onload = function () {
+
         }
         let fetchBtn = document.querySelector('#fetch');
         let xhrBtn = document.querySelector('#xhr');
-        
+
         let cardLol = document.querySelector('#cardLol');
         let box = document.querySelector('#box');
-        
+
         let detailModal = document.querySelector('#detailModal');
         let vedioModal = document.querySelector('#vedioModal');
-        
+
         // show.addEventListener('click', function(){
         //     if(box.style.visibility == 'visible')
         //     {
@@ -162,7 +182,7 @@
         // })
 
         fetchBtn.addEventListener('click', fetchFunction)
-        function fetchFunction(){
+        function fetchFunction() {
             box.innerHTML = ''
             fetch(url) // review
                 .then(response => response.json())
@@ -170,35 +190,35 @@
                     championsObject = result.data
                     console.log(result.data);
                     getData()
-            })
-            
+                })
+
         }
         xhrBtn.addEventListener('click', xhrFunction)
-        function xhrFunction(){
+        function xhrFunction() {
             box.innerHTML = ''
             let xhr = new XMLHttpRequest();
             xhr.responseType = 'json'
-            xhr.onload = function(){
-                if(xhr.readyState == 4 && xhr.status == 200){
+            xhr.onload = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
                     //https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/385965/
                     console.log(xhr.response.data);
                     championsObject = xhr.response.data
                     getData()
                 }
-                else{
+                else {
                     alert(`發生錯誤，HTTP response代碼：${xhr.status}`)
                 }
             }
             xhr.open('GET', url)
             xhr.send()
         }
-        
-        function getData(){
+
+        function getData() {
             namesArray = Object.keys(championsObject)
             namesArray.forEach((item, index) => {
                 let cloneContent = cardLol.content.cloneNode(true) // review
-                cloneContent.querySelector('img').src =  `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item}_0.jpg`
-                
+                cloneContent.querySelector('img').src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item}_0.jpg`
+
                 cloneContent.querySelector('#count').innerText = `${index + 1}`
                 cloneContent.querySelector('#engName').innerText = `${item}`
                 cloneContent.querySelector('#chName').innerText = `${championsObject[item].name}`
@@ -206,20 +226,20 @@
                 cloneContent.querySelector('p').title = `${championsObject[item].blurb}`
                 console.log(cloneContent);
                 box.appendChild(cloneContent)
-                
+
 
                 // 如何在確定更新完後才顯示?
             })
             let empty = document.createElement('i')
-            for(let i = 0; i < 6; i++){
+            for (let i = 0; i < 6; i++) {
                 let empty = document.createElement('i')
                 box.appendChild(empty)
             }
-            
+
             box.style.visibility = 'visible'
             let detail = document.querySelectorAll('.detail');
             let vedio = document.querySelectorAll('.vedio');
-            
+
             // 將所有要顯示的綁成array
             detail.forEach(item => {
                 item.addEventListener('click', updateDetailModal)
@@ -228,8 +248,8 @@
                 item.addEventListener('click', updateVedioModal)
             })
         }
-        
-        function updateDetailModal(){
+
+        function updateDetailModal() {
             // Keypoint：用parentNode找到父層節點
             let engName = this.parentNode.querySelector('#engName').textContent
             let chName = this.parentNode.querySelector('#chName').textContent
@@ -239,7 +259,7 @@
             // 將需要顯示的資料做成array
             let content = []
             statsKey.forEach(item => {
-                if(show.includes(item)){
+                if (show.includes(item)) {
                     console.log(item);
                     content.push(`${item} : ${stats[item]}`)
                 }
@@ -252,21 +272,22 @@
             let title = document.querySelector('.detail-modal-title');
             title.innerText = `${engName} - ${chName}`
             console.log(des);
-            
+
         }
-        function updateVedioModal(){
+        function updateVedioModal() {
             console.log('test');
-            
+
             let engName = this.parentNode.querySelector('#engName').textContent
             let chName = this.parentNode.querySelector('#chName').textContent
             let title = document.querySelector('.vedio-modal-title');
             console.log(title);
-            
+
             title.innerText = `${engName} - ${chName}`
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
-
-

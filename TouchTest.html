@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  <div id="app" >
+    {{123}}
+    <div  class="border" v-on:mousedown="aa()" v-on:mousemove="bb()" v-on:mouseup="cc()" @touchstart="gtouchstart()" @touchmove="gtouchmove()" @touchend="gtouchend()">tset</div>
+    <textarea name="" id="" cols="30" rows="10" v-model="result"></textarea>
+  </div>
+  <script>
+    const app = {
+      data(){
+        return{
+          test:'123',
+          result:''
+        }
+      },
+      methods: {
+        gtouchstart(){
+          console.log('1');
+          this.result = this.result.concat('1')
+        },
+        gtouchmove(){
+          console.log('2');
+          this.result = this.result.concat('2')
+        },
+        gtouchend(){
+          console.log('3');
+          this.result = this.result.concat('3')
+        },
+        aa(){
+          console.log('down');
+          this.result = this.result.concat('down')
+          
+        },
+        bb(){
+          console.log('move');
+          this.result = this.result.concat('move')
+        },
+        cc(){
+          console.log('leave');
+          this.result = this.result.concat('leave')
+        }
+      },
+    }
+    Vue.createApp(app).mount('#app')
+  </script>
+</body>
+</html>

@@ -178,11 +178,6 @@ a {
     position: sticky;
     top: 0;
   }
-  header .Custom .header-list-box {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
   header .Custom .header-list-box .header-list {
     display: -webkit-box;
     display: -ms-flexbox;
